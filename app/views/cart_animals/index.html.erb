@@ -1,0 +1,10 @@
+<% @cart.contents.each do |animal_id, quantity| %>
+  <img src="<%= Animal.find(animal_id.to_i).image_path %>" height = "200">
+  <b><%= Animal.find(animal_id.to_i).name %></b> -
+  <%= Animal.find(animal_id.to_i).description %>
+  Quantity: <%= quantity %>
+  $<%= Animal.find(animal_id.to_i).price * @cart.count_of(animal_id) %>
+  <br><br>
+<% end %>
+
+Total Cost: $<%= @cart.total_price %>
