@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/lmac/turing/projects/exotic_pet_shop/spec/features/user_can_add_animal_to_carts_spec.rb": [
+      "/Users/David/turing/2module/projects/exotic_pet_shop/spec/features/user_can_add_animal_to_carts_spec.rb": [
         1,
         null,
         1,
@@ -47,7 +47,7 @@
         null,
         null
       ],
-      "/Users/lmac/turing/projects/exotic_pet_shop/spec/rails_helper.rb": [
+      "/Users/David/turing/2module/projects/exotic_pet_shop/spec/rails_helper.rb": [
         null,
         1,
         1,
@@ -107,14 +107,14 @@
         null,
         null
       ],
-      "/Users/lmac/turing/projects/exotic_pet_shop/config/environment.rb": [
+      "/Users/David/turing/2module/projects/exotic_pet_shop/config/environment.rb": [
         null,
         1,
         null,
         null,
         1
       ],
-      "/Users/lmac/turing/projects/exotic_pet_shop/config/application.rb": [
+      "/Users/David/turing/2module/projects/exotic_pet_shop/config/application.rb": [
         1,
         null,
         1,
@@ -151,12 +151,12 @@
         null,
         null
       ],
-      "/Users/lmac/turing/projects/exotic_pet_shop/config/boot.rb": [
+      "/Users/David/turing/2module/projects/exotic_pet_shop/config/boot.rb": [
         1,
         null,
         1
       ],
-      "/Users/lmac/turing/projects/exotic_pet_shop/config/environments/test.rb": [
+      "/Users/David/turing/2module/projects/exotic_pet_shop/config/environments/test.rb": [
         1,
         null,
         null,
@@ -200,7 +200,7 @@
         null,
         null
       ],
-      "/Users/lmac/turing/projects/exotic_pet_shop/config/initializers/assets.rb": [
+      "/Users/David/turing/2module/projects/exotic_pet_shop/config/initializers/assets.rb": [
         null,
         null,
         null,
@@ -213,7 +213,7 @@
         null,
         null
       ],
-      "/Users/lmac/turing/projects/exotic_pet_shop/config/initializers/backtrace_silencers.rb": [
+      "/Users/David/turing/2module/projects/exotic_pet_shop/config/initializers/backtrace_silencers.rb": [
         null,
         null,
         null,
@@ -222,18 +222,18 @@
         null,
         null
       ],
-      "/Users/lmac/turing/projects/exotic_pet_shop/config/initializers/cookies_serializer.rb": [
+      "/Users/David/turing/2module/projects/exotic_pet_shop/config/initializers/cookies_serializer.rb": [
         null,
         null,
         1
       ],
-      "/Users/lmac/turing/projects/exotic_pet_shop/config/initializers/filter_parameter_logging.rb": [
+      "/Users/David/turing/2module/projects/exotic_pet_shop/config/initializers/filter_parameter_logging.rb": [
         null,
         null,
         null,
         1
       ],
-      "/Users/lmac/turing/projects/exotic_pet_shop/config/initializers/inflections.rb": [
+      "/Users/David/turing/2module/projects/exotic_pet_shop/config/initializers/inflections.rb": [
         null,
         null,
         null,
@@ -251,18 +251,18 @@
         null,
         null
       ],
-      "/Users/lmac/turing/projects/exotic_pet_shop/config/initializers/mime_types.rb": [
+      "/Users/David/turing/2module/projects/exotic_pet_shop/config/initializers/mime_types.rb": [
         null,
         null,
         null,
         null
       ],
-      "/Users/lmac/turing/projects/exotic_pet_shop/config/initializers/session_store.rb": [
+      "/Users/David/turing/2module/projects/exotic_pet_shop/config/initializers/session_store.rb": [
         null,
         null,
         1
       ],
-      "/Users/lmac/turing/projects/exotic_pet_shop/config/initializers/wrap_parameters.rb": [
+      "/Users/David/turing/2module/projects/exotic_pet_shop/config/initializers/wrap_parameters.rb": [
         null,
         null,
         null,
@@ -278,7 +278,7 @@
         null,
         null
       ],
-      "/Users/lmac/turing/projects/exotic_pet_shop/config/routes.rb": [
+      "/Users/David/turing/2module/projects/exotic_pet_shop/config/routes.rb": [
         1,
         1,
         null,
@@ -292,11 +292,11 @@
         null,
         null
       ],
-      "/Users/lmac/turing/projects/exotic_pet_shop/app/helpers/application_helper.rb": [
+      "/Users/David/turing/2module/projects/exotic_pet_shop/app/helpers/application_helper.rb": [
         1,
         null
       ],
-      "/Users/lmac/turing/projects/exotic_pet_shop/spec/features/user_can_see_animals_spec.rb": [
+      "/Users/David/turing/2module/projects/exotic_pet_shop/spec/features/user_can_see_animals_spec.rb": [
         1,
         null,
         1,
@@ -333,86 +333,86 @@
         1,
         null,
         1,
-        1,
-        null,
-        null
-      ],
-      "/Users/lmac/turing/projects/exotic_pet_shop/spec/features/user_can_see_categories_spec.rb": [
-        1,
-        null,
-        1,
-        1,
-        1,
-        null,
-        1,
-        null,
-        1,
-        null,
-        1,
-        null,
-        1,
-        null,
-        null,
-        null
-      ],
-      "/Users/lmac/turing/projects/exotic_pet_shop/spec/models/animal_spec.rb": [
-        1,
-        null,
-        1,
-        1,
-        null
-      ],
-      "/Users/lmac/turing/projects/exotic_pet_shop/app/models/animal.rb": [
-        1,
-        1,
-        null
-      ],
-      "/Users/lmac/turing/projects/exotic_pet_shop/spec/models/cart_spec.rb": [
-        1,
-        null,
-        1,
-        1,
-        1,
-        null,
-        1,
-        null,
-        null,
-        1,
-        1,
-        null,
-        1,
-        null,
-        null,
-        1,
-        1,
-        null,
-        1,
-        1,
-        null,
-        1,
-        null,
-        null,
-        1,
-        1,
-        null,
-        1,
-        null,
-        null,
-        1,
-        1,
-        null,
         1,
         null,
         null
       ],
-      "/Users/lmac/turing/projects/exotic_pet_shop/spec/models/category_spec.rb": [
+      "/Users/David/turing/2module/projects/exotic_pet_shop/spec/features/user_can_see_categories_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        1,
+        null,
+        1,
+        null,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/Users/David/turing/2module/projects/exotic_pet_shop/spec/models/animal_spec.rb": [
         1,
         null,
         1,
         1,
         null
       ],
-      "/Users/lmac/turing/projects/exotic_pet_shop/app/models/category.rb": [
+      "/Users/David/turing/2module/projects/exotic_pet_shop/app/models/animal.rb": [
+        1,
+        1,
+        null
+      ],
+      "/Users/David/turing/2module/projects/exotic_pet_shop/spec/models/cart_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        1,
+        1,
+        null,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        1,
+        null,
+        null
+      ],
+      "/Users/David/turing/2module/projects/exotic_pet_shop/spec/models/category_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        null
+      ],
+      "/Users/David/turing/2module/projects/exotic_pet_shop/app/models/category.rb": [
         1,
         null,
         1,
@@ -433,7 +433,7 @@
         null,
         null
       ],
-      "/Users/lmac/turing/projects/exotic_pet_shop/app/controllers/animals_controller.rb": [
+      "/Users/David/turing/2module/projects/exotic_pet_shop/app/controllers/animals_controller.rb": [
         1,
         1,
         6,
@@ -444,7 +444,7 @@
         null,
         null
       ],
-      "/Users/lmac/turing/projects/exotic_pet_shop/app/controllers/application_controller.rb": [
+      "/Users/David/turing/2module/projects/exotic_pet_shop/app/controllers/application_controller.rb": [
         1,
         1,
         null,
@@ -455,7 +455,7 @@
         null,
         null
       ],
-      "/Users/lmac/turing/projects/exotic_pet_shop/app/models/cart.rb": [
+      "/Users/David/turing/2module/projects/exotic_pet_shop/app/models/cart.rb": [
         1,
         1,
         null,
@@ -484,7 +484,7 @@
         null,
         null
       ],
-      "/Users/lmac/turing/projects/exotic_pet_shop/app/controllers/cart_animals_controller.rb": [
+      "/Users/David/turing/2module/projects/exotic_pet_shop/app/controllers/cart_animals_controller.rb": [
         1,
         1,
         null,
@@ -501,7 +501,7 @@
         null,
         null
       ],
-      "/Users/lmac/turing/projects/exotic_pet_shop/app/controllers/categories_controller.rb": [
+      "/Users/David/turing/2module/projects/exotic_pet_shop/app/controllers/categories_controller.rb": [
         1,
         1,
         2,
@@ -513,6 +513,6 @@
         null
       ]
     },
-    "timestamp": 1469570169
+    "timestamp": 1469573674
   }
 }
