@@ -8,4 +8,8 @@ class CartAnimalsController < ApplicationController
     flash[:notice] = "#{pluralize(@cart.count_of(animal.id), animal.name)} in your cart"
     redirect_to animal_path(animal)
   end
+
+  def index
+  
+  end
 end

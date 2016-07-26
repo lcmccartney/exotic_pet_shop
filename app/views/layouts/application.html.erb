@@ -19,6 +19,10 @@
     Cart: <%= @cart.total %>
   </p>
 
+  <p>
+    <%= link_to "View Cart", cart_path %>
+  </p>
+
   <% flash.each do |type, message| %>
   <%= content_tag :div, message, class: "flash_#{type}" %>
   <% end %>
