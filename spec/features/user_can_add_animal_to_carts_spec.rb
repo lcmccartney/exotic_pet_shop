@@ -35,7 +35,6 @@ RSpec.feature "UserCanAddAnimalToCarts", type: :feature do
     click_on "View Cart"
 
     expect(current_path).to eq(cart_path)
-    save_and_open_page
     expect(page).to have_content("Tiger")
     expect(page).to have_content("Stalker in the night")
     expect(page).to have_content(3500.00)
