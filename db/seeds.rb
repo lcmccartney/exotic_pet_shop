@@ -1,6 +1,12 @@
+Category.destroy_all
+Animal.destroy_all
+
 cats = Category.create(name: "Big Cats")
 reptiles = Category.create(name: "Reptiles")
 
+# Category.all.each do |category|
+# category.update_attribute(:slug, category.name.parameterize)
+# end
 
 cats.animals.create(name: "Tiger", description: "Night predator", image_path: "http://wildaid.org/sites/default/files/photos/iStock_000008484745Large%20%20tiger%20-%20bengal.jpg", price: 4000)
 cats.animals.create(name: "Lion", description: "Lazy predator", image_path: "http://www.timeslive.co.za/incoming/2015/10/31/lion-thinkstock.jpg/ALTERNATES/crop_630x400/lion+thinkstock.JPG", price: 3000)

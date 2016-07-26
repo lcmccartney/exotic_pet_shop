@@ -6,7 +6,7 @@ RSpec.feature "UserCanSeeAnimals", type: :feature do
     category.animals.create(name: "Tiger")
     category.animals.create(name: "Lion")
 
-    visit category_path(category)
+    visit '/big-cats'
 
     expect(page).to have_content("Tiger")
     expect(page).to have_content("Lion")
@@ -16,7 +16,7 @@ RSpec.feature "UserCanSeeAnimals", type: :feature do
     category = Category.create(name: "Big Cats")
     animal = category.animals.create(name: "Tiger", description: "Stalker in the night")
 
-    visit category_path(category)
+    visit '/big-cats'
 
     click_on "Tiger"
 
