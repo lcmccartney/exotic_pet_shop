@@ -1,0 +1,10 @@
+<header class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <ul class="nav navbar-nav navbar-right">
+     <li><%= link_to "All Animals", animals_path %></li>
+     <li><%= link_to "Categories", categories_path %></li>
+     <li><%= link_to "View Cart", cart_path %></li>
+     <li><%= link_to "Cart: #{@cart.total}", cart_path %></li>
+  </ul>
+ </div>
+</header>

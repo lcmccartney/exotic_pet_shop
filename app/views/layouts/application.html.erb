@@ -6,28 +6,15 @@
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
 </head>
-<body>
-  <p>
-    <%= link_to "All Animals", animals_path %>
-  </p>
-
-  <p>
-    <%= link_to "Categories", categories_path %>
-  </p>
-
-  <p>
-    Cart: <%= @cart.total %>
-  </p>
-
-  <p>
-    <%= link_to "View Cart", cart_path %>
-  </p>
-
+<body style="padding-top: 70px;">
+  <%= render partial: "layouts/navbar" %>
   <% flash.each do |type, message| %>
   <%= content_tag :div, message, class: "flash_#{type}" %>
   <% end %>
 
-<%= yield %>
+<div class="container">
+ <%= yield %>
+</div>
 
 </body>
 </html>
