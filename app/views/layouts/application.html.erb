@@ -10,9 +10,19 @@
   <p>
     <%= link_to "All Animals", animals_path %>
   </p>
+
   <p>
     <%= link_to "Categories", categories_path %>
   </p>
+
+  <p>
+    Cart: <%= @cart.total %>
+  </p>
+
+  <% flash.each do |type, message| %>
+  <%= content_tag :div, message, class: "flash_#{type}" %>
+  <% end %>
+
 <%= yield %>
 
 </body>

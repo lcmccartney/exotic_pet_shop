@@ -1,7 +1,9 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+cats = Category.create(name: "Big Cats")
+reptiles = Category.create(name: "Reptiles")
+
+
+cats.animals.create(name: "Tiger", description: "Night predator", image_path: "http://wildaid.org/sites/default/files/photos/iStock_000008484745Large%20%20tiger%20-%20bengal.jpg", price: 4000)
+cats.animals.create(name: "Lion", description: "Lazy predator", image_path: "http://www.timeslive.co.za/incoming/2015/10/31/lion-thinkstock.jpg/ALTERNATES/crop_630x400/lion+thinkstock.JPG", price: 3000)
+
+reptiles.animals.create(name: "Alligator", description: "Water predator", image_path: "http://img2.timeinc.net/people/i/2015/news/150713/alligator-1024.jpg", price: 3500)
+reptiles.animals.create(name: "Komodo Dragon", description: "Indonesian predator", image_path: "http://animals.sandiegozoo.org/sites/default/files/juicebox_slides/island_indonesia_komodo_03.jpg", price: 3200)

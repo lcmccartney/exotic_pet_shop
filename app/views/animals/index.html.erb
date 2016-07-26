@@ -1,3 +1,3 @@
 <% @animals.each do |animal| %>
-  <img src="<%= animal.image_path %>">
+  <%= link_to image_tag(animal.image_path), animal_path(animal) %>
 <% end %>
