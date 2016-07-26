@@ -14,7 +14,7 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2016-07-26T12:13:13-06:00">2016-07-26T12:13:13-06:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2016-07-26T12:41:49-06:00">2016-07-26T12:41:49-06:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -25,15 +25,15 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.42
+         1.43
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>28</b> files in total.
-    <b>172</b> relevant lines. 
-    <span class="green"><b>172</b> lines covered</span> and
+    <b>175</b> relevant lines. 
+    <span class="green"><b>175</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -113,11 +113,11 @@
       <tr>
         <td class="strong"><a href="#720cea7c75ac8fb402178efe810a0e1efc993e1f" class="src_link" title="app/models/cart.rb">app/models/cart.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>20</td>
-        <td>11</td>
-        <td>11</td>
+        <td>27</td>
+        <td>15</td>
+        <td>15</td>
         <td>0</td>
-        <td>4.8</td>
+        <td>3.9</td>
       </tr>
       
       <tr>
@@ -263,9 +263,9 @@
       <tr>
         <td class="strong"><a href="#5956fe79e2c58ebc42cdbcf44649211a10493362" class="src_link" title="spec/features/user_can_add_animal_to_carts_spec.rb">spec/features/user_can_add_animal_to_carts_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>45</td>
-        <td>25</td>
-        <td>25</td>
+        <td>44</td>
+        <td>24</td>
+        <td>24</td>
         <td>0</td>
         <td>1.0</td>
       </tr>
@@ -741,8 +741,8 @@
     <h3>app/models/cart.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>11</b> relevant lines. 
-      <span class="green"><b>11</b> lines covered</span> and
+      <b>15</b> relevant lines. 
+      <span class="green"><b>15</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -852,8 +852,8 @@
           <code class="ruby">  def count_of(animal_id)</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="18">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="6" data-linenumber="18">
+          <span class="hits">6</span>
           
           <code class="ruby">    contents[animal_id.to_s]</code>
         </li>
@@ -865,6 +865,48 @@
         </li>
       
         <li class="never" data-hits="" data-linenumber="20">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="21">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def total_price</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="22">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    total = contents.map do |animal_id, quantity|</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="23">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      Animal.find(animal_id.to_i).price * count_of(animal_id)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="24">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="25">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    total.sum</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="26">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="27">
           
           
           <code class="ruby">end</code>
@@ -2085,8 +2127,8 @@
     <h3>spec/features/user_can_add_animal_to_carts_spec.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>25</b> relevant lines. 
-      <span class="green"><b>25</b> lines covered</span> and
+      <b>24</b> relevant lines. 
+      <span class="green"><b>24</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -2319,46 +2361,40 @@
         <li class="covered" data-hits="1" data-linenumber="38">
           <span class="hits">1</span>
           
-          <code class="ruby">    save_and_open_page</code>
+          <code class="ruby">    expect(page).to have_content(&quot;Tiger&quot;)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="39">
           <span class="hits">1</span>
           
-          <code class="ruby">    expect(page).to have_content(&quot;Tiger&quot;)</code>
+          <code class="ruby">    expect(page).to have_content(&quot;Stalker in the night&quot;)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="40">
           <span class="hits">1</span>
           
-          <code class="ruby">    expect(page).to have_content(&quot;Stalker in the night&quot;)</code>
+          <code class="ruby">    expect(page).to have_content(3500.00)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="41">
           <span class="hits">1</span>
           
-          <code class="ruby">    expect(page).to have_content(3500.00)</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="42">
-          <span class="hits">1</span>
-          
           <code class="ruby">    expect(page).to have_xpath(&quot;//img[@src=&#39;http://wildaid.org/sites/default/files/photos/iStock_000008484745Large%20%20tiger%20-%20bengal.jpg&#39;]&quot;)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="43">
+        <li class="never" data-hits="" data-linenumber="42">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="44">
+        <li class="never" data-hits="" data-linenumber="43">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="45">
+        <li class="never" data-hits="" data-linenumber="44">
           
           
           <code class="ruby">end</code>
