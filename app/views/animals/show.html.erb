@@ -1,0 +1,4 @@
+<%= @animal.name %>
+<br>
+<%= @animal.description %>
+<%= button_to "Add to Cart", cart_animals_path(animal_id: @animal.id), class: "btn btn-success" %>
