@@ -21,7 +21,6 @@ RSpec.feature "UserCanRemoveAnimalFromCart" do
     click_on "Remove"
     expect(page).to have_no_content(3500)
     expect(page).to have_content "Successfully removed Tiger from your cart."
-
     click_on "Tiger"
 
     expect(current_path).to eq(animal_path(animal))
