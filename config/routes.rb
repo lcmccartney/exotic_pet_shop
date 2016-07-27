@@ -12,9 +12,13 @@ Rails.application.routes.draw do
   get '/cart', to: 'cart_animals#index'
 
   get '/login', to: 'sessions#new'
-  
+
+  post '/login', to: 'sessions#create'
+
+  delete '/logout', to: 'sessions#destroy'
+
   get '/dashboard', to: 'users#show'
 
-  #keep this at the bottom
+  #keep this at the bottom - error message @category
   get "/:category_slug", to: 'categories#show'
 end
