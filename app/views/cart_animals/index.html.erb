@@ -1,12 +1,29 @@
-<% @cart.contents.each do |animal_id, quantity| %>
-  <img src="<%= Animal.find(animal_id.to_i).image_path %>" height = "200">
-  <b><%= Animal.find(animal_id.to_i).name %></b> -
-  <%= Animal.find(animal_id.to_i).description %>
-  Quantity: <%= quantity %>
-  $<%= Animal.find(animal_id.to_i).price * @cart.count_of(animal_id) %>
-  <br><br>
-  <%= link_to "Remove", cart_animal_path(animal_id), method: :delete, class: "btn btn-warning" %>
-  <%= button_to "Add", cart_animal_path(animal_id), method: :put, class: "btn btn-success"%>
-<% end %>
+<div class = "well">
+<table>
+    <tr>
+    <td>
+      <th>Animal</th>
+      <th>Quantity</th>
+      <th>Price</th>
+    </td>
+  </tr>
+  <tr>
+      <% @cart.contents.each do |animal_id, quantity| %>
+
+          <td>
+            <img src="<%= Animal.find(animal_id.to_i).image_path %>" height = "200">
+            <b><%= Animal.find(animal_id.to_i).name %></b> -
+            <%= Animal.find(animal_id.to_i).description %>
+          </td>
+
+          <td>Quantity: <%= quantity %>
+          <td>$<%= Animal.find(animal_id.to_i).price * @cart.count_of(animal_id) %>
+          <td><%= link_to "Remove", cart_animal_path(animal_id), method: :delete, class: "btn btn-warning" %>
+          <%= button_to "Add", cart_animal_path(animal_id), method: :put, class: "btn btn-success"%>
+        <% end %>
+  </tr>
+</table>
+</div>
+
 
 Total Cost: $<%= @cart.total_price %>
