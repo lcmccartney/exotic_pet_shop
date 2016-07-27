@@ -5,7 +5,7 @@ class CartAnimalsController < ApplicationController
     animal = Animal.find(params[:animal_id])
     @cart.add_animal(animal.id)
     session[:cart] = @cart.contents
-    flash[:notice] = "#{pluralize(@cart.count_of(animal.id), animal.name)} in your cart"
+    flash[:success] = "#{pluralize(@cart.count_of(animal.id), animal.name)} in your cart"
     redirect_to animal_path(animal)
   end
 
@@ -15,8 +15,8 @@ class CartAnimalsController < ApplicationController
   def destroy
     animal = Animal.find(params[:id])
     @cart.remove_animal(animal.id)
-    a = %Q[<a href="/animals/#{animal.id}">#{animal.name}</a>]
-    flash[:notice] = "Successfully removed #{a} from your cart."
+    link = %Q[<a href="/animals/#{animal.id}">#{animal.name}</a>]
+    flash[:success] = "Successfully removed #{link} from your cart."
     redirect_to cart_path
   end
 end
