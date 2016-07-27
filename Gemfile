@@ -36,6 +36,7 @@ gem 'rails_12factor', group: :production
 group :test do
   gem 'simplecov'
   gem 'launchy'
+  gem 'shoulda-matchers', '~> 3.1'
 end
 
 group :development, :test do
