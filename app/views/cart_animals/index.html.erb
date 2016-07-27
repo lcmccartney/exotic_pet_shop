@@ -5,7 +5,8 @@
   Quantity: <%= quantity %>
   $<%= Animal.find(animal_id.to_i).price * @cart.count_of(animal_id) %>
   <br><br>
-  <%= link_to "Remove", cart_animal_path(animal_id), method: :delete %>
+  <%= link_to "Remove", cart_animal_path(animal_id), method: :delete, class: "btn btn-warning" %>
+  <%= button_to "Add", cart_animal_path(animal_id), method: :put, class: "btn btn-success"%>
 <% end %>
 
 Total Cost: $<%= @cart.total_price %>
