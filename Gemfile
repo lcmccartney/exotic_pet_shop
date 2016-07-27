@@ -34,6 +34,7 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'rails_12factor', group: :production
 
 group :test do
+  gem 'simplecov'
   gem 'launchy'
   gem 'shoulda-matchers', '~> 3.1'
 end
