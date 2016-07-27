@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   resources :animals, only: [:show, :index]
 
-  resources :cart_animals, only: [:create]
+  resources :cart_animals, only: [:create, :destroy]
 
   get '/cart', to: 'cart_animals#index'
 

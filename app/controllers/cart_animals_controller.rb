@@ -10,6 +10,13 @@ class CartAnimalsController < ApplicationController
   end
 
   def index
-  
+  end
+
+  def destroy
+    animal = Animal.find(params[:id])
+    @cart.remove_animal(animal.id)
+    a = %Q[<a href="/animals/#{animal.id}">#{animal.name}</a>]
+    flash[:notice] = "Successfully removed #{a} from your cart."
+    redirect_to cart_path
   end
 end

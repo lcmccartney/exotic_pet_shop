@@ -25,7 +25,7 @@ RSpec.feature "UserCanAddAnimalToCarts", type: :feature do
     animal = category.animals.create(
           name: "Tiger",
           description: "Stalker in the night",
-          price: 3500.00,
+          price: 3500,
           image_path: "http://wildaid.org/sites/default/files/photos/iStock_000008484745Large%20%20tiger%20-%20bengal.jpg")
 
     visit animal_path(animal)
@@ -37,7 +37,7 @@ RSpec.feature "UserCanAddAnimalToCarts", type: :feature do
     expect(current_path).to eq(cart_path)
     expect(page).to have_content("Tiger")
     expect(page).to have_content("Stalker in the night")
-    expect(page).to have_content(3500.00)
+    expect(page).to have_content(3500)
     expect(page).to have_xpath("//img[@src='http://wildaid.org/sites/default/files/photos/iStock_000008484745Large%20%20tiger%20-%20bengal.jpg']")
 
   end
