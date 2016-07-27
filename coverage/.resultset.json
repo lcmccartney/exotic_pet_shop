@@ -298,6 +298,13 @@
         1,
         null,
         1,
+        null,
+        1,
+        null,
+        1,
+        null,
+        null,
+        1,
         null
       ],
       "/Users/lmac/turing/projects/exotic_pet_shop/app/helpers/application_helper.rb": [
@@ -325,6 +332,32 @@
         1,
         1,
         1,
+        null,
+        null
+      ],
+      "/Users/lmac/turing/projects/exotic_pet_shop/spec/features/user_can_login_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        null,
+        1,
+        null,
+        1,
+        1,
+        null,
+        1,
+        null,
+        1,
+        1,
+        null,
+        1,
+        null,
+        1,
+        1,
+        0,
+        0,
+        null,
         null,
         null
       ],
@@ -509,6 +542,19 @@
         null,
         null
       ],
+      "/Users/lmac/turing/projects/exotic_pet_shop/spec/models/user_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        null
+      ],
+      "/Users/lmac/turing/projects/exotic_pet_shop/app/models/user.rb": [
+        1,
+        1,
+        null,
+        null
+      ],
       "/Users/lmac/turing/projects/exotic_pet_shop/app/controllers/animals_controller.rb": [
         1,
         1,
@@ -516,7 +562,7 @@
         null,
         null,
         1,
-        1,
+        2,
         null,
         null
       ],
@@ -527,7 +573,7 @@
         1,
         null,
         1,
-        33,
+        38,
         null,
         null
       ],
@@ -536,7 +582,7 @@
         1,
         null,
         1,
-        38,
+        43,
         null,
         null,
         1,
@@ -550,7 +596,7 @@
         null,
         null,
         1,
-        25,
+        29,
         null,
         null,
         1,
@@ -596,6 +642,45 @@
         null,
         null
       ],
+      "/Users/lmac/turing/projects/exotic_pet_shop/app/controllers/sessions_controller.rb": [
+        1,
+        null,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/Users/lmac/turing/projects/exotic_pet_shop/app/controllers/users_controller.rb": [
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        0,
+        0,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null
+      ],
       "/Users/lmac/turing/projects/exotic_pet_shop/app/controllers/categories_controller.rb": [
         1,
         1,
@@ -608,6 +693,6 @@
         null
       ]
     },
-    "timestamp": 1469640219
+    "timestamp": 1469646139
   }
 }
