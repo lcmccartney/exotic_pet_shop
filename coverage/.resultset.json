@@ -297,13 +297,42 @@
         null,
         1,
         null,
+        1,
         null
       ],
       "/Users/lmac/turing/projects/exotic_pet_shop/app/helpers/application_helper.rb": [
         1,
         null
       ],
+<<<<<<< HEAD
       "/Users/lmac/turing/projects/exotic_pet_shop/spec/features/user_can_remove_animal_from_cart_spec.rb": [
+=======
+      "/Users/matthewrpacker/Turing/2module/exotic_pet_shop/spec/features/user_can_increment_quantity_in_cart_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        1,
+        null,
+        1,
+        null,
+        1,
+        null,
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/matthewrpacker/Turing/2module/exotic_pet_shop/spec/features/user_can_remove_animal_from_cart_spec.rb": [
+>>>>>>> 4139327aae2aa04f0afff78d7fd779aa16ee3e6d
         1,
         null,
         1,
@@ -320,8 +349,12 @@
         null,
         1,
         1,
+        null,
         1,
         1,
+        1,
+        1,
+        null,
         1,
         null,
         1,
@@ -471,7 +504,7 @@
         1,
         null,
         1,
-        7,
+        8,
         null,
         null,
         1,
@@ -483,7 +516,7 @@
       "/Users/lmac/turing/projects/exotic_pet_shop/app/controllers/animals_controller.rb": [
         1,
         1,
-        10,
+        12,
         null,
         null,
         1,
@@ -498,7 +531,7 @@
         1,
         null,
         1,
-        27,
+        33,
         null,
         null
       ],
@@ -507,12 +540,12 @@
         1,
         null,
         1,
-        32,
+        38,
         null,
         null,
         1,
-        7,
-        7,
+        9,
+        9,
         null,
         null,
         1,
@@ -521,18 +554,18 @@
         null,
         null,
         1,
-        21,
+        25,
         null,
         null,
         1,
-        12,
+        17,
         null,
         null,
         1,
-        4,
-        3,
+        6,
+        5,
         null,
-        4,
+        6,
         null,
         null
       ],
@@ -541,11 +574,11 @@
         1,
         null,
         1,
-        5,
-        5,
-        5,
-        5,
-        5,
+        6,
+        6,
+        6,
+        6,
+        6,
         null,
         null,
         1,
@@ -557,6 +590,13 @@
         2,
         2,
         2,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
         null,
         null
       ],
@@ -572,6 +612,10 @@
         null
       ]
     },
+<<<<<<< HEAD
     "timestamp": 1469639758
+=======
+    "timestamp": 1469591107
+>>>>>>> 4139327aae2aa04f0afff78d7fd779aa16ee3e6d
   }
 }

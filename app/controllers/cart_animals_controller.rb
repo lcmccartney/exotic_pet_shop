@@ -19,4 +19,11 @@ class CartAnimalsController < ApplicationController
     flash[:success] = "Successfully removed #{link} from your cart."
     redirect_to cart_path
   end
+
+  def update
+    animal = Animal.find(params[:id])
+    @cart.add_animal(animal.id)
+    flash[:success] = "Successfully added #{animal.name}!"
+    redirect_to cart_path
+  end
 end
