@@ -10,6 +10,5 @@ class CartAnimalsController < ApplicationController
   end
 
   def index
-  
   end
 end
