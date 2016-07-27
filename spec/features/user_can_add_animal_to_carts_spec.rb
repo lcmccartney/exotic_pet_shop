@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.feature "UserCanAddAnimalToCarts", type: :feature do
   scenario "should display added to cart message and see cart count increase" do
     category = Category.create(name: "Big Cats")
-    animal = category.animals.create(name: "Tiger", description: "Stalker in the night", image_path: "http://wildaid.org/sites/default/files/photos/iStock_000008484745Large%20%20tiger%20-%20bengal.jpg")
+    animal = category.animals.create(name: "Tiger", description: "Stalker in the night", price: 3500, image_path: "http://wildaid.org/sites/default/files/photos/iStock_000008484745Large%20%20tiger%20-%20bengal.jpg")
 
     visit animal_path(animal)
 

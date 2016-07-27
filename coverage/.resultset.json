@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/matthewrpacker/Turing/2module/exotic_pet_shop/spec/features/user_can_add_animal_to_carts_spec.rb": [
+      "/Users/lmac/turing/projects/exotic_pet_shop/spec/features/user_can_add_animal_to_carts_spec.rb": [
         1,
         null,
         1,
@@ -47,7 +47,7 @@
         null,
         null
       ],
-      "/Users/matthewrpacker/Turing/2module/exotic_pet_shop/spec/rails_helper.rb": [
+      "/Users/lmac/turing/projects/exotic_pet_shop/spec/rails_helper.rb": [
         null,
         1,
         1,
@@ -56,6 +56,13 @@
         1,
         1,
         1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
         null,
         null,
         null,
@@ -107,14 +114,14 @@
         null,
         null
       ],
-      "/Users/matthewrpacker/Turing/2module/exotic_pet_shop/config/environment.rb": [
+      "/Users/lmac/turing/projects/exotic_pet_shop/config/environment.rb": [
         null,
         1,
         null,
         null,
         1
       ],
-      "/Users/matthewrpacker/Turing/2module/exotic_pet_shop/config/application.rb": [
+      "/Users/lmac/turing/projects/exotic_pet_shop/config/application.rb": [
         1,
         null,
         1,
@@ -151,12 +158,12 @@
         null,
         null
       ],
-      "/Users/matthewrpacker/Turing/2module/exotic_pet_shop/config/boot.rb": [
+      "/Users/lmac/turing/projects/exotic_pet_shop/config/boot.rb": [
         1,
         null,
         1
       ],
-      "/Users/matthewrpacker/Turing/2module/exotic_pet_shop/config/environments/test.rb": [
+      "/Users/lmac/turing/projects/exotic_pet_shop/config/environments/test.rb": [
         1,
         null,
         null,
@@ -200,7 +207,7 @@
         null,
         null
       ],
-      "/Users/matthewrpacker/Turing/2module/exotic_pet_shop/config/initializers/assets.rb": [
+      "/Users/lmac/turing/projects/exotic_pet_shop/config/initializers/assets.rb": [
         null,
         null,
         null,
@@ -213,7 +220,7 @@
         null,
         null
       ],
-      "/Users/matthewrpacker/Turing/2module/exotic_pet_shop/config/initializers/backtrace_silencers.rb": [
+      "/Users/lmac/turing/projects/exotic_pet_shop/config/initializers/backtrace_silencers.rb": [
         null,
         null,
         null,
@@ -222,18 +229,18 @@
         null,
         null
       ],
-      "/Users/matthewrpacker/Turing/2module/exotic_pet_shop/config/initializers/cookies_serializer.rb": [
+      "/Users/lmac/turing/projects/exotic_pet_shop/config/initializers/cookies_serializer.rb": [
         null,
         null,
         1
       ],
-      "/Users/matthewrpacker/Turing/2module/exotic_pet_shop/config/initializers/filter_parameter_logging.rb": [
+      "/Users/lmac/turing/projects/exotic_pet_shop/config/initializers/filter_parameter_logging.rb": [
         null,
         null,
         null,
         1
       ],
-      "/Users/matthewrpacker/Turing/2module/exotic_pet_shop/config/initializers/inflections.rb": [
+      "/Users/lmac/turing/projects/exotic_pet_shop/config/initializers/inflections.rb": [
         null,
         null,
         null,
@@ -251,18 +258,18 @@
         null,
         null
       ],
-      "/Users/matthewrpacker/Turing/2module/exotic_pet_shop/config/initializers/mime_types.rb": [
+      "/Users/lmac/turing/projects/exotic_pet_shop/config/initializers/mime_types.rb": [
         null,
         null,
         null,
         null
       ],
-      "/Users/matthewrpacker/Turing/2module/exotic_pet_shop/config/initializers/session_store.rb": [
+      "/Users/lmac/turing/projects/exotic_pet_shop/config/initializers/session_store.rb": [
         null,
         null,
         1
       ],
-      "/Users/matthewrpacker/Turing/2module/exotic_pet_shop/config/initializers/wrap_parameters.rb": [
+      "/Users/lmac/turing/projects/exotic_pet_shop/config/initializers/wrap_parameters.rb": [
         null,
         null,
         null,
@@ -278,7 +285,7 @@
         null,
         null
       ],
-      "/Users/matthewrpacker/Turing/2module/exotic_pet_shop/config/routes.rb": [
+      "/Users/lmac/turing/projects/exotic_pet_shop/config/routes.rb": [
         1,
         1,
         null,
@@ -293,11 +300,11 @@
         1,
         null
       ],
-      "/Users/matthewrpacker/Turing/2module/exotic_pet_shop/app/helpers/application_helper.rb": [
+      "/Users/lmac/turing/projects/exotic_pet_shop/app/helpers/application_helper.rb": [
         1,
         null
       ],
-      "/Users/matthewrpacker/Turing/2module/exotic_pet_shop/spec/features/user_can_increment_quantity_in_cart_spec.rb": [
+      "/Users/lmac/turing/projects/exotic_pet_shop/spec/features/user_can_increment_quantity_in_cart_spec.rb": [
         1,
         null,
         1,
@@ -316,133 +323,19 @@
         1,
         null,
         1,
-        1,
-        1,
-        null,
-        null
-      ],
-      "/Users/matthewrpacker/Turing/2module/exotic_pet_shop/spec/features/user_can_remove_animal_from_cart_spec.rb": [
-        1,
-        null,
-        1,
-        1,
-        1,
-        1,
-        null,
-        1,
-        null,
-        1,
-        1,
-        null,
-        1,
-        null,
-        1,
-        1,
-        null,
-        1,
-        1,
-        1,
-        1,
-        null,
-        1,
-        null,
-        1,
-        1,
-        1,
-        1,
-        null,
-        1,
-        null,
-        null
-      ],
-      "/Users/matthewrpacker/Turing/2module/exotic_pet_shop/spec/features/user_can_see_animals_spec.rb": [
-        1,
-        null,
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
-        1,
-        null,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        1,
-        null,
-        1,
-        null,
-        1,
-        null,
-        1,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        1,
-        null,
-        1,
-        null,
-        1,
-        null,
         1,
         1,
         null,
         null
       ],
-      "/Users/matthewrpacker/Turing/2module/exotic_pet_shop/spec/features/user_can_see_categories_spec.rb": [
+      "/Users/lmac/turing/projects/exotic_pet_shop/spec/features/user_can_remove_animal_from_cart_spec.rb": [
         1,
         null,
         1,
         1,
         1,
-        null,
         1,
         null,
-        1,
-        null,
-        1,
-        null,
-        1,
-        null,
-        null,
-        null
-      ],
-      "/Users/matthewrpacker/Turing/2module/exotic_pet_shop/spec/models/animal_spec.rb": [
-        1,
-        null,
-        1,
-        1,
-        null
-      ],
-      "/Users/matthewrpacker/Turing/2module/exotic_pet_shop/app/models/animal.rb": [
-        1,
-        1,
-        null
-      ],
-      "/Users/matthewrpacker/Turing/2module/exotic_pet_shop/spec/models/cart_spec.rb": [
-        1,
-        null,
-        1,
-        1,
-        1,
-        null,
-        1,
-        null,
-        null,
-        1,
-        1,
-        null,
-        1,
-        null,
-        null,
-        1,
         1,
         null,
         1,
@@ -450,13 +343,18 @@
         null,
         1,
         null,
-        null,
         1,
         1,
         null,
         1,
+        1,
+        1,
+        1,
         null,
+        1,
         null,
+        1,
+        1,
         1,
         1,
         null,
@@ -464,18 +362,137 @@
         null,
         null
       ],
-      "/Users/matthewrpacker/Turing/2module/exotic_pet_shop/spec/models/category_spec.rb": [
+      "/Users/lmac/turing/projects/exotic_pet_shop/spec/features/user_can_see_animals_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/lmac/turing/projects/exotic_pet_shop/spec/features/user_can_see_categories_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        1,
+        null,
+        1,
+        null,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/Users/lmac/turing/projects/exotic_pet_shop/spec/models/animal_spec.rb": [
+        1,
+        null,
+        1,
+        2,
+        2,
+        2,
+        2,
+        null
+      ],
+      "/Users/lmac/turing/projects/exotic_pet_shop/app/models/animal.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null
+      ],
+      "/Users/lmac/turing/projects/exotic_pet_shop/spec/models/cart_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        1,
+        1,
+        null,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        1,
+        null,
+        null
+      ],
+      "/Users/lmac/turing/projects/exotic_pet_shop/spec/models/category_spec.rb": [
         1,
         null,
         1,
         1,
         null
       ],
-      "/Users/matthewrpacker/Turing/2module/exotic_pet_shop/app/models/category.rb": [
+      "/Users/lmac/turing/projects/exotic_pet_shop/app/models/category.rb": [
         1,
         null,
         1,
         null,
+        1,
         1,
         null,
         1,
@@ -492,7 +509,7 @@
         null,
         null
       ],
-      "/Users/matthewrpacker/Turing/2module/exotic_pet_shop/app/controllers/animals_controller.rb": [
+      "/Users/lmac/turing/projects/exotic_pet_shop/app/controllers/animals_controller.rb": [
         1,
         1,
         12,
@@ -503,7 +520,7 @@
         null,
         null
       ],
-      "/Users/matthewrpacker/Turing/2module/exotic_pet_shop/app/controllers/application_controller.rb": [
+      "/Users/lmac/turing/projects/exotic_pet_shop/app/controllers/application_controller.rb": [
         1,
         1,
         null,
@@ -514,7 +531,7 @@
         null,
         null
       ],
-      "/Users/matthewrpacker/Turing/2module/exotic_pet_shop/app/models/cart.rb": [
+      "/Users/lmac/turing/projects/exotic_pet_shop/app/models/cart.rb": [
         1,
         1,
         null,
@@ -548,7 +565,7 @@
         null,
         null
       ],
-      "/Users/matthewrpacker/Turing/2module/exotic_pet_shop/app/controllers/cart_animals_controller.rb": [
+      "/Users/lmac/turing/projects/exotic_pet_shop/app/controllers/cart_animals_controller.rb": [
         1,
         1,
         null,
@@ -579,7 +596,7 @@
         null,
         null
       ],
-      "/Users/matthewrpacker/Turing/2module/exotic_pet_shop/app/controllers/categories_controller.rb": [
+      "/Users/lmac/turing/projects/exotic_pet_shop/app/controllers/categories_controller.rb": [
         1,
         1,
         2,
@@ -591,6 +608,6 @@
         null
       ]
     },
-    "timestamp": 1469591107
+    "timestamp": 1469640219
   }
 }
