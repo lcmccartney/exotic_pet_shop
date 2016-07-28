@@ -8,7 +8,7 @@ class UsersController < ApplicationController
     if current_user
       @user = current_user
     else
-      flash[:failure] = "Please log in or create an account."
+      flash[:danger] = "Please log in or create an account."
       redirect_to login_path
     end
   end
@@ -20,7 +20,7 @@ class UsersController < ApplicationController
       flash[:success] = "You have successfully created a new account."
       redirect_to dashboard_path
     else
-      flash.now[:failure] = "Invalid login."
+      flash.now[:danger] = "Invalid login."
       render :new
     end
   end
