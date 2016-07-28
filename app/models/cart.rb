@@ -10,6 +10,11 @@ class Cart
     contents[animal_id.to_s] += 1
   end
 
+  def remove_animal(animal_id)
+    contents[animal_id.to_s] -= 1
+    contents.delete_if{ |key, value| value == 0}
+  end
+
   def total
     contents.values.sum
   end

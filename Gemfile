@@ -23,7 +23,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'bootstrap-sass', '~> 3.3.6'
 
 # Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt', '~> 3.1.7'
 
 # Use Unicorn as the app server
 # gem 'unicorn'
@@ -36,6 +36,7 @@ gem 'rails_12factor', group: :production
 group :test do
   gem 'simplecov'
   gem 'launchy'
+  gem 'shoulda-matchers', '~> 3.1'
 end
 
 group :development, :test do
@@ -43,6 +44,7 @@ group :development, :test do
   gem 'byebug'
   gem 'rspec-rails'
   gem 'capybara'
+  gem 'pry-rails'
 end
 
 group :development do
