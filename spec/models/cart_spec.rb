@@ -16,8 +16,8 @@ RSpec.describe "cart", type: :model do
   it "should be able to add an animal to the cart" do
     cart = Cart.new({"1" => 2})
 
-    cart.add_animal(1)
-    cart.add_animal(2)
+    cart.increase_animal(1)
+    cart.increase_animal(2)
 
     expect(cart.contents).to eq({"1" => 3, "2" => 1})
   end
