@@ -4,7 +4,7 @@ class OrdersController < ApplicationController
    if current_user
      @orders = current_user.orders
    else
-     flash[:failure] = "Please log in or create an account."
+     flash[:danger] = "Please log in or create an account."
      redirect_to login_path
    end
  end

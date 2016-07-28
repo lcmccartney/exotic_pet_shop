@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
       session[:user_id] = user.id
       redirect_to dashboard_path
     else
-      flash.now[:failure] = "Invalid login"
+      flash.now[:danger] = "Invalid login"
       render :new
     end
   end
