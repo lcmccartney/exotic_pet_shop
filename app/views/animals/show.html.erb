@@ -1,8 +1,10 @@
 <div class="text-center">
-<%= @animal.name %>
+<h3><%= @animal.name %></h3>
 <br>
-<%= image_tag(@animal.image_path, :class => "img-rounded") %>
+<%= image_tag(@animal.image_path, size: "300", :class => "img-rounded") %>
 <br>
 <%= @animal.description %>
+<br>
+<%= @animal.price %>
 <%= button_to "Add to Cart", cart_animals_path(animal_id: @animal.id), class: "btn btn-success" %>
 </div>

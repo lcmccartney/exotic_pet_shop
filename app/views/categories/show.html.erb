@@ -1,7 +1,11 @@
+<div class="text-center">
 <h1><%= @category.name %></h1>
 <% @category.animals.each do |animal| %>
-  <%= link_to animal.name, animal_path(animal) %>
+  <%= link_to animal.name, animal_path(animal) %>: <%= animal.description %>
   <br>
-  <%= animal.description %>
+  <%= image_tag(animal.image_path, size: "150", class: "img-circle") %>
+  <br>
+  <br>
   <br>
 <% end %>
+</div>
