@@ -4,9 +4,10 @@
 
     <% @animals.each do |animal| %>
     <div class="col-sm-5 col-md-3">
-      <div class="thumbnail">
 
-        <%= link_to image_tag(animal.image_path, size: "200", class: "col-md-3 centered img-rounded"), animal_path(animal) %>
+    <div class="thumbnail">
+
+        <%= link_to image_tag(animal.image_path), animal_path(animal) %>
       </div>
     </div>
     <% end %>
