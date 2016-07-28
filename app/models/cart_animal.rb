@@ -8,5 +8,5 @@ class CartAnimal < SimpleDelegator
 end
 
 
-ca = CartAnimal.new("3", 5)
-ca.name
+# ca = CartAnimal.new("3", 5)
+# ca.name

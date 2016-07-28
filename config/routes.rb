@@ -5,11 +5,13 @@ Rails.application.routes.draw do
 
   resources :animals, only: [:show, :index]
 
-  resources :cart_animals, only: [:create, :destroy, :update]
+  resources :cart_animals, only: [:create, :destroy]
 
   resources :users, only: [:new, :create]
 
   resources :orders, only: [:index]
+
+  put '/cart_animals/:id', to: 'cart_animals#increment'
 
   get '/cart', to: 'cart_animals#index'
 

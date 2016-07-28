@@ -32,30 +32,12 @@
                         <td class="col-sm-1 col-md-1 text-center"><strong>$<%= Animal.find(animal_id.to_i).price * @cart.count_of(animal_id) %>.00</strong></td>
 
                         <td class="col-sm-1 col-md-1">
-                          <%= link_to "Remove", cart_animal_path(animal_id), method: :delete, class: "btn btn-warning" %><br><br>
-                          <%= button_to "Add", cart_animal_path(animal_id), method: :put, class: "btn btn-success"%>
+                          <%= link_to "-", cart_animal_path(animal_id, increment: "decrease"), method: :put, class: "btn btn-warning" %><br><br>
+                          <%= button_to "+", cart_animal_path(animal_id, increment: "increase"), method: :put, class: "btn btn-success"%><br>
+                          <%= button_to "Remove", cart_animal_path(animal_id), method: :delete, class: "btn btn-danger"%>
+
                         </td>
                     </tr>
-                    <!-- <tr>
-                        <td class="col-md-6">
-                        <div class="media">
-                            <a class="thumbnail pull-left" href="#"> <img class="media-object" src="http://icons.iconarchive.com/icons/custom-icon-design/flatastic-2/72/product-icon.png" style="width: 72px; height: 72px;"> </a>
-                            <div class="media-body">
-                                <h4 class="media-heading"><a href="#">Product name</a></h4>
-                                <h5 class="media-heading"> by <a href="#">Brand name</a></h5>
-                                <span>Status: </span><span class="text-warning"><strong>Leaves warehouse in 2 - 3 weeks</strong></span>
-                            </div>
-                        </div></td>
-                        <td class="col-md-1" style="text-align: center">
-                        <input type="email" class="form-control" id="exampleInputEmail1" value="2">
-                        </td>
-                        <td class="col-md-1 text-center"><strong>$4.99</strong></td>
-                        <td class="col-md-1 text-center"><strong>$9.98</strong></td>
-                        <td class="col-md-1">
-                        <button type="button" class="btn btn-danger">
-                            <span class="glyphicon glyphicon-remove"></span> Remove
-                        </button></td>
-                    </tr> -->
                     <% end %>
 
                     <!-- <tr>
