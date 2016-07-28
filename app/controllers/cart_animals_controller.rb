@@ -1,15 +1,15 @@
 class CartAnimalsController < ApplicationController
   include ActionView::Helpers::TextHelper
 
+  def index
+  end
+
   def create
     animal = Animal.find(params[:animal_id])
     @cart.add_animal(animal.id)
     session[:cart] = @cart.contents
     flash[:success] = "#{pluralize(@cart.count_of(animal.id), animal.name)} in your cart"
     redirect_to animal_path(animal)
-  end
-
-  def index
   end
 
   def destroy
