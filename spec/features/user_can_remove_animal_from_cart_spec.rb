@@ -13,12 +13,12 @@ RSpec.feature "UserCanRemoveAnimalFromCart" do
     click_on "View Cart"
 
     expect(page).to have_content(7000)
-    expect(page).to have_content("Quantity: 2")
+    expect(page).to have_content("View Cart: 2")
 
     click_on "Remove"
     expect(current_path).to eq(cart_path)
     expect(page).to have_content(3500)
-    expect(page).to have_content("Quantity: 1")
+    expect(page).to have_content("View Cart: 1")
 
     expect(page).to have_content "Successfully removed Tiger from your cart."
 
