@@ -5,7 +5,12 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:id])
+    if current_user
+      @user = current_user
+    else
+      flash[:failure] = "Please log in or create an account."
+      redirect_to login_path
+    end
   end
 
   def create
@@ -13,7 +18,7 @@ class UsersController < ApplicationController
     if user.save
       session[:user_id] = user.id
       flash[:success] = "You have successfully created a new account."
-      redirect_to dashboard_path(id: user.id)
+      redirect_to dashboard_path
     else
       flash.now[:failure] = "Invalid login."
       render :new
