@@ -1,9 +1,14 @@
-<h1 class= "text-center">Welcome to the Exotic Pet Shop</h1>
-<br>
-<div class="container">
+<div class="well">
+  <h1 class= "text-center">Welcome to the Exotic Pet Shop</h1>
   <div class="row">
+
     <% @animals.each do |animal| %>
-    <%= link_to image_tag(animal.image_path, size: "200", class: "col-md-3 centered img-rounded"), animal_path(animal) %>
+    <div class="col-sm-5 col-md-3">
+
+    <div class="thumbnail">
+
+        <%= link_to image_tag(animal.image_path), animal_path(animal) %>
+      </div>
+    </div>
     <% end %>
   </div>
-</div>
