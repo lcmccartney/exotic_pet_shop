@@ -6,7 +6,7 @@
   <%= link_to "Add some animals!", animals_path, class: "btn btn-lg btn-primary"%></center>
 </div>
 <% else %>
-
+<body class="full-cart">
 <div class="container">
     <div class="row">
         <div class="col-sm-12 col-md-10 col-md-offset-1">
@@ -86,6 +86,7 @@
         </div>
     </div>
 </div>
+</body>
 <% end %>
 
 <!-- <% @cart.contents.each do |animal_id, quantity| %>
