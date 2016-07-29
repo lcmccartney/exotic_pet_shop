@@ -1,6 +1,9 @@
+<body class="category-index">
+
 <div class="text-center">
 <h1>Categories</h1>
 <% @categories.each do |category| %>
   <h3><%= link_to category.name, category.slug %><h3>
 <% end %>
 </div>
+</body>

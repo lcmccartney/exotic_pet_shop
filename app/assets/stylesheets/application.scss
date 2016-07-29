@@ -15,13 +15,47 @@
  @import "bootstrap-sprockets";
  @import "bootstrap";
 
- #empty_cart_bg {
-   background-color: #263d36;
-   background-image: url("https://pixabay.com/static/uploads/photo/2015/09/02/13/08/nest-918898_960_720.jpg");
-   background-position: center;
-   background-repeat: no-repeat;
-   background-size: cover;
-   line-height: 1.2;
-   padding: 10vw 2em;
-   text-align: center;
- }
+ // #login-body, body {
+ // /*css for full size background image*/
+ //   background: url(http://p1.pichost.me/i/66/1910819.jpg) no-repeat center center fixed;
+ //   -webkit-background-size: cover;
+ //   -moz-background-size: cover;
+ //   -o-background-size: cover;
+ //   background-size: cover;
+ //
+ //   height: 100%;
+ //   background-color: #060;
+ //   color: #fff;
+ //   text-align: center;
+ //   text-shadow: 0 1px 3px rgba(0,0,0,.5);
+ //
+ // }
+
+body {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+body.login {
+    background: url(http://p1.pichost.me/i/66/1910819.jpg) no-repeat center center fixed;
+}
+body.category-index {
+    background: url(https://pixabay.com/static/uploads/photo/2013/08/28/11/47/green-leaf-176722_960_720.jpg) no-repeat center center fixed;
+    background-size: 100%;
+}
+
+body.full-cart {
+    background: url(https://pixabay.com/static/uploads/photo/2014/08/01/00/08/pier-407252_960_720.jpg) no-repeat center center fixed;
+    background-size: 100%;
+}
+
+div.well.login {
+  background-color: rgba(245, 245, 245, 0.4);
+  max-width: 25%;
+} 
+
+.navbar-brand {
+  font-family: Impact;
+  font-size: 30px;
+}
