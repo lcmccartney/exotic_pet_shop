@@ -14,3 +14,14 @@
 
  @import "bootstrap-sprockets";
  @import "bootstrap";
+
+ #empty_cart_bg {
+   background-color: #263d36;
+   background-image: url("https://pixabay.com/static/uploads/photo/2015/09/02/13/08/nest-918898_960_720.jpg");
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   line-height: 1.2;
+   padding: 10vw 2em;
+   text-align: center;
+ }
