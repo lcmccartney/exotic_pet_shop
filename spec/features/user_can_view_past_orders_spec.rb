@@ -28,8 +28,10 @@ RSpec.feature "UserCanViewPastOrders", type: :feature do
   end
 
   scenario "they can view a past order with order details" do
+    category = Category.create(name: "Big Cats")
+    animal = category.animals.create(name: "Tiger", description: "Stalker in the night", price: 3500, image_path: "http://wildaid.org/sites/default/files/photos/iStock_000008484745Large%20%20tiger%20-%20bengal.jpg")
     user = User.create(username: "someguy", password: "password")
-    order = user.orders.create
+    animal.orders.create()
 
     visit login_path
 
@@ -49,6 +51,12 @@ RSpec.feature "UserCanViewPastOrders", type: :feature do
     click_on("View Order Details")
 
     expect(current_path).to eq(order_path(order))
+
+    expect(page).to have_content()
+    expect(page).to have_content()
+    expect(page).to have_content()
+    expect(page).to have_content()
+    expect(page).to have_content()
 
     # Then I should see each item that was order with the quantity and line-item subtotals
     # And I should see links to each item's show page
