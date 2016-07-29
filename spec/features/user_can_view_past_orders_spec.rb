@@ -27,7 +27,7 @@ RSpec.feature "UserCanViewPastOrders", type: :feature do
     expect(page).to have_content("Please log in or create an account.")
   end
 
-  scenario "they can view a past order with order details" do
+  xscenario "they can view a past order with order details" do
     category = Category.create(name: "Big Cats")
     animal = category.animals.create(name: "Tiger", description: "Stalker in the night", price: 3500, image_path: "http://wildaid.org/sites/default/files/photos/iStock_000008484745Large%20%20tiger%20-%20bengal.jpg")
     user = User.create(username: "someguy", password: "password")
