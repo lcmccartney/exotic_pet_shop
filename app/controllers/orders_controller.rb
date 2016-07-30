@@ -14,7 +14,7 @@ class OrdersController < ApplicationController
  end
 
  def create
-   order = Order.create(user_id: current_user.id)
+   order = Order.create(user_id: current_user.id, total_price: @cart.total_price)
 
    @cart.cart_animals.each do |animal_order|
      order.order_animals.create(

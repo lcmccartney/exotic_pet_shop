@@ -11,9 +11,4 @@ class CartAnimal < SimpleDelegator
   def subtotal
     quantity * price
   end
-
 end
-
-
-# ca = CartAnimal.new("3", 5)
-# ca.name

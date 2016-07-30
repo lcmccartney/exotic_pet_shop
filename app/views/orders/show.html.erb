@@ -1,11 +1,16 @@
 <h1>Order Number: <%= @order.id%></h1>
 <br>
 <%= @order.status %>
-<%= @order.created_at %>
+<br><br>
+<% if @order.closed? %>
+Order <%= @order.status %> at <%= @order.updated_at %>
+<br>
+<% end %>
+Order created at <%= @order.created_at %>
 <br><br>
 
 <% @order.order_animals.each do |animal_order| %>
-Name: <%= animal_order.animal.name %>
+Name: <%= link_to animal_order.animal.name, animal_path(animal_order.animal) %>
 <br>
 Quantity: <%= animal_order.quantity %>
 <br>
@@ -14,6 +19,6 @@ $<%= animal_order.subtotal %>
 <% end %>
 <br>
 
-Total: $<%= @order.order_animals.sum(:subtotal) %>
+Total: $<%= @order.total_price %>
 <br><br><br>
 <%= link_to "All Orders", orders_path, class: "btn btn-info" %>
