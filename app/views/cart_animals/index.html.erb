@@ -72,11 +72,13 @@
                     <tr>
                         <td>   </td>
                         <td>   </td>
-                        <td>   </td>
+                        <td>   </td>
                         <td>
                           <%= link_to "Continue Shopping", animals_path, class: "btn btn-info" %>
                         </td>
                         <td>
+                          <%= button_to "Checkout", orders_path,  class: "btn btn-success" if !@cart.contents.empty? && current_user%>
+
                           <%= link_to "Login or Create Account to Checkout", login_path, class: "btn btn-success" if current_user.nil? %>
                         </td>
                     </tr>

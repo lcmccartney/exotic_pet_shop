@@ -1,12 +1,11 @@
 require 'rails_helper'
 
 RSpec.feature "UserCanCheckout", type: :feature do
-  xscenario "when on cart page" do
+  scenario "when on cart page" do
     category = Category.create(name: "Big Cats")
     tiger = category.animals.create(id: "1", name: "Tiger", description: "Stalker in the night", price: 3000, image_path: "http://wildaid.org/sites/default/files/photos/iStock_000008484745Large%20%20tiger%20-%20bengal.jpg")
     lion = category.animals.create(id: "2", name: "Lion", description: "Lazy during the day", price: 7000, image_path: "http://wildaid.org/sites/default/files/photos/iStock_000008484745Large%20%20tiger%20-%20bengal.jpg")
     user = User.create(username: "someguy", password: "password")
-    order = user.orders.create(status: "ordered")
 
     visit "/animals/#{tiger.id}"
 

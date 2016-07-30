@@ -4,9 +4,8 @@
  Order Number: <%= order.id %>
  <br>
  <%= link_to "View Order Details", order_path(order), class: "btn btn-info" %>
- <br>
+ <br><br>
 <% end %>
-
-<% if @orders.nil? %>
+<% if @orders.empty? %>
 <h3>You have no orders</h3>
 <% end %>
