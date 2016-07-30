@@ -27,33 +27,45 @@ RSpec.feature "UserCanViewPastOrders", type: :feature do
     expect(page).to have_content("Please log in or create an account.")
   end
 
-  xscenario "they can view a past order with order details" do
+  scenario "they can view a past order with order details" do
     category = Category.create(name: "Big Cats")
     tiger = category.animals.create(id: "1", name: "Tiger", description: "Stalker in the night", price: 3000, image_path: "http://wildaid.org/sites/default/files/photos/iStock_000008484745Large%20%20tiger%20-%20bengal.jpg")
     lion = category.animals.create(id: "2", name: "Lion", description: "Lazy during the day", price: 7000, image_path: "http://wildaid.org/sites/default/files/photos/iStock_000008484745Large%20%20tiger%20-%20bengal.jpg")
     user = User.create(username: "someguy", password: "password")
-    order = user.orders.create(status: "ordered")
-    order.animals << tiger
-    order.animals << tiger
-    order.animals << lion
-    order.order_animals.create(animal_id: "1")
 
-    visit login_path
+    visit "/animals/#{tiger.id}"
+
+    click_on "Add to Cart"
+
+    visit cart_path
+
+    click_on "+"
+
+    expect(page).to have_content(6000)
+
+    visit "/animals/#{lion.id}"
+
+    click_on "Add to Cart"
+
+    visit cart_path
+
+    expect(page).to have_content(7000)
+    expect(page).to have_content(13000)
+
+    click_on "Login or Create Account to Checkout"
 
     fill_in "Username", with: "someguy"
     fill_in "Password", with: "password"
 
     click_button "Login"
 
-    expect(page).to have_content("Welcome, someguy")
+    click_on "Checkout"
 
-    visit orders_path
-
-    expect(page).to have_content("Past Orders")
+    order = Order.last
 
     expect(page).to have_content(order.id)
 
-    click_on("View Order Details")
+    expect(page).to have_content("All Orders")
 
     expect(current_path).to eq(order_path(order))
 

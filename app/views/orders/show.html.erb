@@ -1,3 +1,19 @@
 <h1>Order Number: <%= @order.id%></h1>
-
+<br>
 <%= @order.status %>
+<%= @order.created_at %>
+<br><br>
+
+<% @order.order_animals.each do |animal_order| %>
+Name: <%= animal_order.animal.name %>
+<br>
+Quantity: <%= animal_order.quantity %>
+<br>
+$<%= animal_order.subtotal %>
+<br><br>
+<% end %>
+<br>
+
+Total: $<%= @order.order_animals.sum(:subtotal) %>
+<br><br><br>
+<%= link_to "All Orders", orders_path, class: "btn btn-info" %>
