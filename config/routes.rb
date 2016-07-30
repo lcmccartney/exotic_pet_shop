@@ -21,7 +21,10 @@ Rails.application.routes.draw do
 
   delete '/logout', to: 'sessions#destroy'
 
-  get '/dashboard', to: 'users#show', as: 'dashboard'
+  namespace :admin do
+    get '/dashboard', to: 'users#show', as: 'dashboard'
+  end
+    get '/dashboard', to: 'users#show', as: 'dashboard'
 
   #keep this at the bottom - error message @category
   get "/:category_slug", to: 'categories#show'
