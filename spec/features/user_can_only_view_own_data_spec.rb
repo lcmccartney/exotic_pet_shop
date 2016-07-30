@@ -27,6 +27,12 @@ RSpec.feature "UserCanOnlyViewOwnData", type: :feature do
 
   scenario "they cannot view another user's private data" do
     user = User.create(username: "someguy", password: "password")
+    visit login_path
+
+    fill_in "Username", with: "someguy"
+    fill_in "Password", with: "password"
+
+    click_button "Login"
 
     visit admin_dashboard_path
 
@@ -36,6 +42,13 @@ RSpec.feature "UserCanOnlyViewOwnData", type: :feature do
 
   scenario "they cannot view any admin capablities" do
     user = User.create(username: "someguy", password: "password")
+
+    visit login_path
+
+    fill_in "Username", with: "someguy"
+    fill_in "Password", with: "password"
+
+    click_button "Login"
 
     visit admin_dashboard_path
 

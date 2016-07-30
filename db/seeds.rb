@@ -23,7 +23,7 @@ reptiles.animals.create(name: "Chinese Water Dragon", description: "Chinese wate
 reptiles.animals.create(name: "Dodo Bird", status: 1, description: "They are dodos", image_path: "http://3.bp.blogspot.com/-X4eldaXoJbA/TWB2BT7yDaI/AAAAAAAAA5Q/roD99gExE74/s1600/dodo.jpg", price: 1000000)
 
 andrew = User.create(username: "andrew", password: "password")
-admin = User.create(username: "admin", password: "admin")
+admin = User.create(role: 1, username: "admin", password: "admin")
 
 5.times do
   andrew.orders.create
