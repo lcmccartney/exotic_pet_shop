@@ -33,4 +33,12 @@ RSpec.describe "cart", type: :model do
 
     expect(cart.count_of(1)).to eq(2)
   end
+
+  it "should return the total price of all animals" do
+    category = Category.create(name: "Big Cats")
+    category.animals.create(id: "1", name: "Tiger", description: "Stalker in the night", price: 3500, image_path: "http://wildaid.org/sites/default/files/photos/iStock_000008484745Large%20%20tiger%20-%20bengal.jpg")
+    category.animals.create(id: "2", name: "Lion", description: "Lazy during the day", price: 7000, image_path: "http://wildaid.org/sites/default/files/photos/iStock_000008484745Large%20%20tiger%20-%20bengal.jpg")
+    cart = Cart.new({"1" => 2, "2" => 3})
+    expect(cart.total_price).to eq(28000)
+  end
 end

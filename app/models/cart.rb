@@ -23,20 +23,28 @@ class Cart
     contents.values.sum
   end
 
-  # def cart_animals
-  #   contents.map do |id, quantity|
-  #     CartAnimal.new(id, quantity)
-  #   end
-  # end
+  def cart_animals
+    contents.map do |id, quantity|
+      CartAnimal.new(id, quantity)
+    end
+  end
 
   def count_of(animal_id)
     contents[animal_id.to_s]
   end
 
+  # def price_per_animal(animal_id)
+  #   find_animal(animal_id).price * find_animal(animal_id).quantity
+  # end.sum
+
+  # def find_animal(animal_id)
+  #   cart_animals.find(animal_id)
+  # end
+
   def total_price
-    total = contents.map do |animal_id, quantity|
-      Animal.find(animal_id.to_i).price * count_of(animal_id)
-    end
-    total.sum
+    cart_animals.map do |animal|
+      animal.price * animal.quantity
+    end.sum
   end
+
 end

@@ -3,4 +3,6 @@
 <% @orders.each do |order| %>
  Order Number: <%= order.id %>
  <br>
+ <%= link_to "View Order Details", order_path(order), class: "btn btn-info" %>
+ <br>
 <% end %>
