@@ -9,23 +9,23 @@ RSpec.describe Animal, type: :model do
   it "should check whether animal is extinct" do
     category = Category.create(name: "Big Cats")
     animal_1 = category.animals.create(
-     name: "Tiger",
-     status: 1,
-     description: "Stalker in the night",
-     price: 3500,
-     image_path: "http://wildaid.org/sites/default/files/photos/iStock_000008484745Large%20%20tiger%20-%20bengal.jpg"
-     )
+      name: "Tiger",
+      status: 1,
+      description: "Stalker in the night",
+      price: 3500,
+      image_path: "http://wildaid.org/sites/default/files/photos/iStock_000008484745Large%20%20tiger%20-%20bengal.jpg"
+    )
 
     extinct_animal = animal_1.extinct?
     expect(extinct_animal).to eq(true)
 
     animal_2 = category.animals.create(
-     name: "Tiger",
-     status: 0,
-     description: "Stalker in the night",
-     price: 3500,
-     image_path: "http://wildaid.org/sites/default/files/photos/iStock_000008484745Large%20%20tiger%20-%20bengal.jpg"
-     )
+      name: "Tiger",
+      status: 0,
+      description: "Stalker in the night",
+      price: 3500,
+      image_path: "http://wildaid.org/sites/default/files/photos/iStock_000008484745Large%20%20tiger%20-%20bengal.jpg"
+    )
 
     active_animal = animal_2.extinct?
     expect(active_animal).to eq(false)
