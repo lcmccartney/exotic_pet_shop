@@ -11,6 +11,8 @@ cats.animals.create(name: "Lion", description: "Lazy predator", image_path: "htt
 
 reptiles.animals.create(name: "Alligator", description: "Water predator", image_path: "http://img2.timeinc.net/people/i/2015/news/150713/alligator-1024.jpg", price: 3500)
 reptiles.animals.create(name: "Komodo Dragon", description: "Indonesian predator", image_path: "http://animals.sandiegozoo.org/sites/default/files/juicebox_slides/island_indonesia_komodo_03.jpg", price: 3200)
+reptiles.animals.create(name: "Dodo Bird", status: 1, description: "They are dodos", image_path: "http://3.bp.blogspot.com/-X4eldaXoJbA/TWB2BT7yDaI/AAAAAAAAA5Q/roD99gExE74/s1600/dodo.jpg", price: 1000000)
+
 
 andrew = User.create(username: "andrew", password: "password")
 andrew.orders.create
