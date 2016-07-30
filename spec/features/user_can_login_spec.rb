@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.feature "UserCanLogin", type: :feature do
-  scenario "after they visit login page and create an account" do
+  scenario "they visit login page, create an account, and see dashboard" do
 
     visit root_path
 
@@ -62,5 +62,26 @@ RSpec.feature "UserCanLogin", type: :feature do
     expect(page).to have_no_content("Logged in as someguy")
     expect(page).to have_content("Login")
     expect(page).to have_no_content("Logout")
+  end
+
+  scenario "they login from cart page with animals and redirect to cart" do
+    user = User.create(username: "someguy", password: "password")
+    category = Category.create(name: "Big Cats")
+    tiger = category.animals.create(id: "1", name: "Tiger", description: "Stalker in the night", price: 3000, image_path: "http://wildaid.org/sites/default/files/photos/iStock_000008484745Large%20%20tiger%20-%20bengal.jpg")
+
+    visit "/animals/#{tiger.id}"
+
+    click_on "Add to Cart"
+
+    visit cart_path
+
+    click_on "Login or Create Account to Checkout"
+
+    fill_in "Username", with: "someguy"
+    fill_in "Password", with: "password"
+
+    click_button "Login"
+
+    expect(current_path).to eq(cart_path)
   end
 end

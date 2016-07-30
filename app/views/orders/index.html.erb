@@ -6,3 +6,7 @@
  <%= link_to "View Order Details", order_path(order), class: "btn btn-info" %>
  <br>
 <% end %>
+
+<% if @orders.nil? %>
+<h3>You have no orders</h3>
+<% end %>
