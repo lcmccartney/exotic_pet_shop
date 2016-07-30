@@ -63,11 +63,9 @@ RSpec.feature "UserCanViewPastOrders", type: :feature do
 
     order = Order.last
 
-    expect(page).to have_content("Past Orders")
-
     expect(page).to have_content(order.id)
 
-    click_on("View Order Details")
+    expect(page).to have_content("All Orders")
 
     expect(current_path).to eq(order_path(order))
 
