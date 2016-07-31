@@ -10,7 +10,7 @@ class OrdersController < ApplicationController
   end
 
   def show
-    if current_user
+    if current_user && current_user.orders.find_by(id: params[:id])
       @order = current_user.orders.find(params[:id])
     else
       flash[:danger] = "Please log in or create an account."

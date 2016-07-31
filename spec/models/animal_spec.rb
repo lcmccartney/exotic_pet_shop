@@ -5,6 +5,10 @@ RSpec.describe Animal, type: :model do
   it { should validate_presence_of(:description) }
   it { should validate_presence_of(:price) }
   it { should validate_presence_of(:image_path) }
+  it { should have_many(:order_animals) }
+  it { should have_many(:orders) }
+  it { should belong_to(:category) }
+  it { should define_enum_for(:status) }
 
   it "should check whether animal is extinct" do
     category = Category.create(name: "Big Cats")
