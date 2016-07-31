@@ -9,7 +9,7 @@
     <div class="">Order <%= @order.status %> at <%= @order.updated_at %></div>
     <br>
     <% end %>
-    <div class="">Created at: <%= @order.created_at %></div>
+    <div class="">Ordered at: <%= @order.created_at %></div>
   <br>
 
   <table class="order-table table table-bordered">
@@ -36,15 +36,15 @@
   </table>
 
   <div class= "row">
-    <div class="col-md-2">
+    <div class="col-md-2 col-md-offset-5">
       <br>
       <%= link_to "Return to All Orders", orders_path, class: "btn btn-lg btn-info" %>
     </div>
-      <div class="col-md-2">
+      <div class="col-md-offset-2 col-md-1">
         <br>
         <p>
           <h4>
-            Total : <br>
+            Total: <br> 
           </h4>
         </p>
       </div>
@@ -54,9 +54,7 @@
           $<%= @order.total_price %>.00 <br>
         </h4>
       </div>
-
+    </div>
   </div>
 </div>
-
-  </div>
 </body>
