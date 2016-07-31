@@ -18,16 +18,15 @@ class UsersController < ApplicationController
     if user.save
       session[:user_id] = user.id
       flash[:success] = "You have successfully created a new account."
+      redirect_to cart_path if @cart.contents.any?
       redirect_to dashboard_path if @cart.contents.empty?
-      redirect_to cart_path unless @cart.contents.empty?
     else
       flash.now[:danger] = "Invalid login."
       render :new
     end
   end
 
-
-  private
+private
 
   def user_params
     params.require(:user).permit(:username, :password)
