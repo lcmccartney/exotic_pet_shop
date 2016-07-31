@@ -38,5 +38,4 @@ class Cart
       animal.subtotal
     end.sum
   end
-
 end

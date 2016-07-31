@@ -1,5 +1,4 @@
 class OrderProcessor
-
   attr_reader :order, :cart
 
   def initialize(order, cart)
