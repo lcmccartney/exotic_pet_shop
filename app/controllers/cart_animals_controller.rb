@@ -34,6 +34,6 @@ class CartAnimalsController < ApplicationController
   end
 
   def animal_link
-    %Q[<a href="/animals/#{@animal.id}">#{@animal.name}</a>]
+    %Q(<a href="/animals/#{@animal.id}">#{@animal.name}</a>)
   end
 end

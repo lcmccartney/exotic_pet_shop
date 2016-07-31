@@ -29,10 +29,9 @@ class OrdersController < ApplicationController
     redirect_to order_path(order)
   end
 
-private
+  private
 
   def create_order(order)
     OrderProcessor.new(order, @cart).add_animals_to_order
   end
-
 end
