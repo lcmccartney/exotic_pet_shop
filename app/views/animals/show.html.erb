@@ -9,6 +9,6 @@
 <% if @animal.extinct? %>
 <h3>This Animal is Extinct</h3>
 <% else %>
-<%= button_to "Add to Cart", cart_animals_path(animal_id: @animal.id), class: "btn btn-success" %>
+<%= button_to "Add to Cart", cart_animals_path(id: @animal.id), class: "btn btn-success" %>
 <% end %>
 </div>

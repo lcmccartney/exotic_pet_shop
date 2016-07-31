@@ -5,7 +5,7 @@ class CartAnimalsController < ApplicationController
   end
 
   def create
-    animal = Animal.find(params[:animal_id])
+    animal = Animal.find(params[:id])
     @cart.increase_animal(animal.id)
     session[:cart] = @cart.contents
     flash[:success] = "#{pluralize(@cart.count_of(animal.id), animal.name)} in your cart"
