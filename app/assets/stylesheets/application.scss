@@ -50,10 +50,24 @@ body.login {
   background: url("http://project4gallery.com/wp-content/uploads/2016/03/landscape_amazing_nature_quality_lake_background_picture-84.jpg") no-repeat center center fixed;
 }
 
+.animal-show {
+  background: url("http://smsranjish.com/wp-content/uploads/2015/08/Jungle-River-HD-Wallpapers.jpg") no-repeat center center fixed;
+}
+
 .animal-info {
-  background-color: rgba(245, 245, 245, 0.6);
+  background-color: rgba(245, 245, 245, 0.7);
   margin: auto;
   max-width: 40%;
+}
+
+.animal-name {
+  background-color: rgba(245, 245, 245, 0.7);
+  margin: auto;
+  max-width: 40%;
+}
+
+.animal-image {
+  padding: 10px;
 }
 
 .category-index {
