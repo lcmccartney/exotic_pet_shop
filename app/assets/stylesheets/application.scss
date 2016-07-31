@@ -38,7 +38,7 @@ body {
   background-size: cover;
 }
 body.login {
-    background: url("http://p1.pichost.me/i/66/1910819.jpg") no-repeat center center fixed;
+  background: url("http://p1.pichost.me/i/66/1910819.jpg") no-repeat center center fixed;
 }
 
 .animal {
@@ -54,6 +54,18 @@ body.login {
 .category-index {
   background: url("https://pixabay.com/static/uploads/photo/2013/08/28/11/47/green-leaf-176722_960_720.jpg") no-repeat center center fixed;
   background-size: 100%;
+}
+
+.category-header {
+  background-color: rgba(245, 245, 245, 0.6);
+  margin: auto;
+  max-width: 40%;
+}
+
+.category-list {
+  background-color: rgba(245, 245, 245, 0.6);
+  margin: auto;
+  max-width: 40%;
 }
 
 .full-cart {
