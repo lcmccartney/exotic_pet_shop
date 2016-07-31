@@ -1,14 +1,20 @@
-<div class="text-center">
-<h3><%= @animal.name %></h3>
-<br>
-<%= image_tag(@animal.image_path, size: "300", :class => "img-rounded") %>
-<br>
-<%= @animal.description %>
-<br>
-<%= @animal.price %>
-<% if @animal.extinct? %>
-<h3>This Animal is Extinct</h3>
-<% else %>
-<%= button_to "Add to Cart", cart_animals_path(id: @animal.id), class: "btn btn-success" %>
-<% end %>
+<body class="animal">
+  <div class="text-center">
+    <div class="well animal-name">
+    <h3><%= @animal.name %></h3>
+    <br>
+    <%= image_tag(@animal.image_path, size: "300", :class => "img-rounded") %>
+    <br><br>
+    <%= @animal.description %>
+    <br><br>
+    <strong>Price: $<%= @animal.price %></strong>
+    <br>
+    <% if @animal.extinct? %>
+    <h3>This Animal is Extinct</h3>
+    <% else %>
+    <%= button_to "Add to Cart", cart_animals_path(id: @animal.id), class: "btn btn-success" %>
+    <% end %>
+  </div>
+  <br>
 </div>
+</body>
