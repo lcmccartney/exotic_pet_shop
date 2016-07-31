@@ -16,5 +16,4 @@ private
   def to_param
     slug
   end
-
 end
