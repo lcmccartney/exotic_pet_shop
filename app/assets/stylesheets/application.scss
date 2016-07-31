@@ -37,6 +37,11 @@ body {
   -o-background-size: cover;
   background-size: cover;
 }
+
+.order-show-page {
+  background: url("https://aos.iacpublishinglabs.com/question/aq/1400px-788px/natural-resources-african-savanna_5e4deadc068a7348.jpg?domain=cx.aos.ask.com") no-repeat center center fixed;
+}
+
 body.login {
   background: url("http://p1.pichost.me/i/66/1910819.jpg") no-repeat center center fixed;
 }
@@ -71,6 +76,11 @@ body.login {
 .full-cart {
   background: url("https://pixabay.com/static/uploads/photo/2014/08/01/00/08/pier-407252_960_720.jpg") no-repeat center center fixed;
   background-size: 100%;
+}
+
+.order-table {
+  background-color: rgba(245, 245, 245, 0.7);
+  margin: auto;
 }
 
 .well.login {
