@@ -12,7 +12,7 @@ class SessionsController < ApplicationController
         redirect_to admin_dashboard_path
       else
       redirect_to dashboard_path if @cart.contents.empty?
-      redirect_to cart_path if !@cart.contents.empty?
+      redirect_to cart_path unless @cart.contents.empty?
       end
     else
       flash.now[:danger] = "Invalid login"
