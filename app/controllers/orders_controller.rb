@@ -10,7 +10,12 @@ class OrdersController < ApplicationController
   end
 
   def show
-    @order = current_user.orders.find(params[:id])
+    if current_user
+      @order = current_user.orders.find(params[:id])
+    else
+      flash[:danger] = "Please log in or create an account."
+      redirect_to login_path
+    end
   end
 
   def create
@@ -27,6 +32,7 @@ class OrdersController < ApplicationController
         quantity: animal_order.quantity
       )
     end
+    @cart.contents.clear
     flash[:success] = "Order was successfully placed"
     redirect_to order_path(order)
   end
