@@ -41,6 +41,22 @@ RSpec.feature "AdminHasADashboard", type: :feature do
   end
 
   scenario "they cannot modify other user's data" do
+    user = User.create(username: "someguy", password: "password")
+    order = user.orders.create(status: "ordered", total_price: 10000)
 
+    admin = User.create(role: 1, username: "adminguy", password: "password")
+
+    visit login_path
+
+    fill_in "Username", with: "adminguy"
+    fill_in "Password", with: "password"
+
+    click_button "Login"
+
+    expect(page).to have_content "Welcome, adminguy"
+
+    visit order_path(order)
+
+    expect(page).to have_content("Please log in or create an account.")
   end
 end
