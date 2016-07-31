@@ -38,7 +38,7 @@ body {
   background-size: cover;
 }
 body.login {
-    background: url(http://p1.pichost.me/i/66/1910819.jpg) no-repeat center center fixed;
+    background: url('http://p1.pichost.me/i/66/1910819.jpg') no-repeat center center fixed;
 }
 
 .animal {
@@ -52,12 +52,12 @@ body.login {
 }
 
 .category-index {
-  background: url(https://pixabay.com/static/uploads/photo/2013/08/28/11/47/green-leaf-176722_960_720.jpg) no-repeat center center fixed;
+  background: url('https://pixabay.com/static/uploads/photo/2013/08/28/11/47/green-leaf-176722_960_720.jpg') no-repeat center center fixed;
   background-size: 100%;
 }
 
 .full-cart {
-    background: url(https://pixabay.com/static/uploads/photo/2014/08/01/00/08/pier-407252_960_720.jpg) no-repeat center center fixed;
+    background: url('https://pixabay.com/static/uploads/photo/2014/08/01/00/08/pier-407252_960_720.jpg') no-repeat center center fixed;
     background-size: 100%;
 }
 
@@ -69,10 +69,6 @@ body.login {
 .navbar-brand {
   font-family: Impact;
   font-size: 30px;
-}
-
-body {
-	background: url(http://subtlepatterns.com/patterns/scribble_light.png) ;
 }
 
 #wrapper {
