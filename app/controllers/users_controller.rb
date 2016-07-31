@@ -19,7 +19,7 @@ class UsersController < ApplicationController
       session[:user_id] = user.id
       flash[:success] = "You have successfully created a new account."
       redirect_to dashboard_path if @cart.contents.empty?
-      redirect_to cart_path if !@cart.contents.empty?
+      redirect_to cart_path unless @cart.contents.empty?
     else
       flash.now[:danger] = "Invalid login."
       render :new
