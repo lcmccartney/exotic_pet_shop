@@ -37,6 +37,11 @@ body {
   -o-background-size: cover;
   background-size: cover;
 }
+
+.order-show-page {
+  background: url("https://aos.iacpublishinglabs.com/question/aq/1400px-788px/natural-resources-african-savanna_5e4deadc068a7348.jpg?domain=cx.aos.ask.com") no-repeat center center fixed;
+}
+
 body.login {
   background: url("http://p1.pichost.me/i/66/1910819.jpg") no-repeat center center fixed;
 }
@@ -66,7 +71,7 @@ body.login {
 }
 
 .category-index {
-  background: url("https://pixabay.com/static/uploads/photo/2013/08/28/11/47/green-leaf-176722_960_720.jpg") no-repeat center center fixed;
+  background: url("http://cdn.wallpapersafari.com/0/30/Iu7N1E.jpg") no-repeat center center fixed;
   background-size: 100%;
 }
 
@@ -82,9 +87,28 @@ body.login {
   max-width: 40%;
 }
 
+.empty-cart {
+  background: url("http://img2.rnkr-static.com/list_img_v2/8544/2108544/full/funny-bird-names-u2.jpg") no-repeat center center fixed;
+  background-size: 100%;
+}
+
 .full-cart {
   background: url("https://pixabay.com/static/uploads/photo/2014/08/01/00/08/pier-407252_960_720.jpg") no-repeat center center fixed;
   background-size: 100%;
+}
+
+.order-index {
+  background: url("http://wallpapers.hdwallpaperhdpictures.in/plog-content/images/wallpapers/animal-wallpapers-pictures/033-exotic-parrot-wallpaper-animal.jpg") no-repeat center center fixed;
+}
+
+.order-index-table {
+  background-color: rgba(245, 245, 245, 0.8);
+  margin: auto;
+}
+
+.order-table {
+  background-color: rgba(245, 245, 245, 0.7);
+  margin: auto;
 }
 
 .well.login {

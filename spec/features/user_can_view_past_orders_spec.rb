@@ -64,27 +64,17 @@ RSpec.feature "UserCanViewPastOrders", type: :feature do
     order = Order.last
 
     expect(page).to have_content(order.id)
-
     expect(page).to have_content("All Orders")
-
     expect(current_path).to eq(order_path(order))
-
     expect(page).to have_content(order.status)
     expect(page).to have_content("Tiger")
-    expect(page).to have_content("Quantity: 2")
+    expect(page).to have_content("2")
     expect(page).to have_content(6000)
-    expect(page).to have_content("Quantity: 1")
+    expect(page).to have_content("1")
     expect(page).to have_content("Lion")
     expect(page).to have_content(7000)
     expect(page).to have_content("Total")
     expect(page).to have_content(13000)
     expect(page).to have_content(order.created_at)
-    # Then I should see each item that was order with the quantity and line-item subtotals
-    # And I should see links to each item's show page
-    # And I should see the current status of the order (ordered, paid, cancelled, completed)
-    # And I should see the total price for the order
-    # And I should see the date/time that the order was submitted
-    # If the order was completed or cancelled
-    # Then I should see a timestamp when the action took place
   end
 end

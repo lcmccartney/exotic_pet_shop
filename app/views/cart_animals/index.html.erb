@@ -1,93 +1,93 @@
 
 <% if @cart.contents.empty? %>
-<div id = "empty_cart_bg">
-  <center><h1>Your cart is empty.</h1>
-  <br>
-  <%= link_to "Add some animals!", animals_path, class: "btn btn-lg btn-primary"%></center>
-</div>
+  <body class="empty-cart">
+      <center><h1>Your cart is empty.</h1>
+      <br>
+      <%= link_to "Add some animals!", animals_path, class: "btn btn-lg btn-primary"%></center>
+  </body>
 <% else %>
-<body class="full-cart">
-<div class="container">
-    <div class="row">
-        <div class="col-sm-12 col-md-10 col-md-offset-1">
-            <table class="table table-hover">
-                <thead>
-                    <tr>
-                        <th>Animal</th>
-                        <th>Quantity</th>
-                        <th class="text-center">Price</th>
-                        <th class="text-center">Total</th>
-                        <th class="text-center">Edit Quantity</th>
-                    </tr>
-                </thead>
-                <tbody>
+  <body class="full-cart">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-10 col-md-offset-1">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Animal</th>
+                            <th>Quantity</th>
+                            <th class="text-center">Price</th>
+                            <th class="text-center">Total</th>
+                            <th class="text-center">Edit Quantity</th>
+                        </tr>
+                    </thead>
+                    <tbody>
 
-                  <% @cart.cart_animals.each do |animal| %>
-                    <tr>
-                        <td class="col-sm-8 col-md-6">
-                        <div class="media">
-                            <a class="thumbnail pull-left" href="#"><img class="media-object" src='<%= animal.image_path %>' style="width: 100px; height: 100px;"></a>
-                            <div class="media-body">
-                                <h4 class="media-heading"><%= link_to animal.name, animal_path(animal.id)%></a></h4>
-                                <h5 class="media-heading"><%= animal.description %></h5>
-                            </div>
-                        </div></td>
-                        <td class="col-sm-1 col-md-1" style="text-align: center">
-                          <%= animal.quantity %>
-                        <!-- <input type="email" class="form-control" id="exampleInputEmail1" value=<%#= quantity %>> -->
-                        </td>
-                        <td class="col-sm-1 col-md-1 text-center"><strong>$<%= animal.price %>.00</strong></td>
-                        <td class="col-sm-1 col-md-1 text-center"><strong>$<%= animal.price * @cart.count_of(animal.id) %>.00</strong></td>
+                      <% @cart.cart_animals.each do |animal| %>
+                        <tr>
+                            <td class="col-sm-8 col-md-6">
+                            <div class="media">
+                                <a class="pull-left" href="#"><img class="media-object img-circle" src='<%= animal.image_path %>' style="width: 100px; height: 100px;"></a>
+                                <div class="media-body">
+                                    <h4 class="media-heading"><%= link_to animal.name, animal_path(animal.id)%></a></h4>
+                                    <h5 class="media-heading"><%= animal.description %></h5>
+                                </div>
+                            </div></td>
+                            <td class="col-sm-1 col-md-1" style="text-align: center">
+                              <%= animal.quantity %>
+                            <!-- <input type="email" class="form-control" id="exampleInputEmail1" value=<%#= quantity %>> -->
+                            </td>
+                            <td class="col-sm-1 col-md-1 text-center"><strong>$<%= animal.price %>.00</strong></td>
+                            <td class="col-sm-1 col-md-1 text-center"><strong>$<%= animal.price * @cart.count_of(animal.id) %>.00</strong></td>
 
-                        <td class="col-sm-1 col-md-1">
-                          <%= link_to "-", cart_animal_path(animal.id, increment: "decrease"), method: :put, class: "btn btn-warning" %><br><br>
-                          <%= button_to "+", cart_animal_path(animal.id, increment: "increase"), method: :put, class: "btn btn-success"%><br>
-                          <%= button_to "Remove", cart_animal_path(animal.id), method: :delete, class: "btn btn-danger"%>
+                            <td class="col-sm-1 col-md-1">
+                              <%= link_to "-", cart_animal_path(animal.id, increment: "decrease"), method: :put, class: "btn btn-warning" %><br><br>
+                              <%= button_to "+", cart_animal_path(animal.id, increment: "increase"), method: :put, class: "btn btn-success"%><br>
+                              <%= button_to "Remove", cart_animal_path(animal.id), method: :delete, class: "btn btn-danger"%>
 
-                        </td>
-                    </tr>
-                    <% end %>
+                            </td>
+                        </tr>
+                        <% end %>
 
-                    <!-- <tr>
-                        <td>   </td>
-                        <td>   </td>
-                        <td>   </td>
-                        <td><h5>Subtotal</h5></td>
-                        <td class="text-right"><h5><strong>$24.59</strong></h5></td>
-                    </tr> -->
-                    <tr>
-                        <td>   </td>
-                        <td>   </td>
-                        <td>   </td>
-                        <td><h5>Estimated shipping</h5></td>
-                        <td class="text-right"><h5><strong>FREE</strong></h5></td>
-                    </tr>
-                    <tr>
-                        <td>   </td>
-                        <td>   </td>
-                        <td>   </td>
-                        <td><h3>Total</h3></td>
-                        <td class="text-right"><h3><strong>$<%= @cart.total_price %>.00</strong></h3></td>
-                    </tr>
-                    <tr>
-                        <td>   </td>
-                        <td>   </td>
-                        <td>   </td>
-                        <td>
-                          <%= link_to "Continue Shopping", animals_path, class: "btn btn-info" %>
-                        </td>
-                        <td>
-                          <%= button_to "Checkout", orders_path,  class: "btn btn-success" if !@cart.contents.empty? && current_user%>
+                        <!-- <tr>
+                            <td>   </td>
+                            <td>   </td>
+                            <td>   </td>
+                            <td><h5>Subtotal</h5></td>
+                            <td class="text-right"><h5><strong>$24.59</strong></h5></td>
+                        </tr> -->
+                        <tr>
+                            <td>   </td>
+                            <td>   </td>
+                            <td>   </td>
+                            <td><h5>Estimated shipping</h5></td>
+                            <td class="text-right"><h5><strong>FREE</strong></h5></td>
+                        </tr>
+                        <tr>
+                            <td>   </td>
+                            <td>   </td>
+                            <td>   </td>
+                            <td><h3>Total</h3></td>
+                            <td class="text-right"><h3><strong>$<%= @cart.total_price %>.00</strong></h3></td>
+                        </tr>
+                        <tr>
+                            <td>   </td>
+                            <td>   </td>
+                            <td>   </td>
+                            <td>
+                              <%= link_to "Continue Shopping", animals_path, class: "btn btn-info" %>
+                            </td>
+                            <td>
+                              <%= button_to "Checkout", orders_path,  class: "btn btn-success" if !@cart.contents.empty? && current_user%>
 
-                          <%= link_to "Login or Create Account to Checkout", login_path, class: "btn btn-success" if current_user.nil? %>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+                              <%= link_to "Login or Create Account to Checkout", login_path, class: "btn btn-success" if current_user.nil? %>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
-</div>
-</body>
+  </body>
 <% end %>
 
 <!-- <% @cart.contents.each do |animal_id, quantity| %>
