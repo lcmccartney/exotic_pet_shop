@@ -30,7 +30,7 @@
          </div>
         </td>
        <td><%= animal_order.quantity %></td>
-       <td>$<%= animal_order.subtotal %>.00</td>
+       <td><%= number_to_currency(animal_order.subtotal) %></td>
    </tbody>
    <% end %>
   </table>
@@ -51,7 +51,7 @@
       <div class="col-md-2">
         <br>
         <h4>
-          $<%= @order.total_price %>.00 <br>
+          <%= number_to_currency(@order.total_price) %> <br>
         </h4>
       </div>
     </div>

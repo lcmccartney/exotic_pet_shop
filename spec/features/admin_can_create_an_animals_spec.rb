@@ -35,7 +35,7 @@ RSpec.feature "AdminCanCreateAnAnimals", type: :feature do
     expect(current_path).to eq(animal_path(animal))
     expect(page).to have_content("Cougar")
     expect(page).to have_content("Active in the day")
-    expect(page).to have_content(9000)
+    expect(page).to have_content('9,000')
     expect(animal.category.name).to eq("Big Cats")
   end
 end
