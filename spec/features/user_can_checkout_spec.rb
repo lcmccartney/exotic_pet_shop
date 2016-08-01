@@ -15,7 +15,7 @@ RSpec.feature "UserCanCheckout", type: :feature do
 
     click_on "+"
 
-    expect(page).to have_content(6000)
+    expect(page).to have_content('6,000')
 
     visit "/animals/#{lion.id}"
 
@@ -23,8 +23,8 @@ RSpec.feature "UserCanCheckout", type: :feature do
 
     visit cart_path
 
-    expect(page).to have_content(7000)
-    expect(page).to have_content(13000)
+    expect(page).to have_content('7,000')
+    expect(page).to have_content('13,000')
 
     click_on "Login or Create Account to Checkout"
 
