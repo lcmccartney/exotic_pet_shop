@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  root to: redirect('/animals')
+  root 'welcome#index'
+  # root to: redirect('/animals')
 
   resources :categories, only: [:index]
 

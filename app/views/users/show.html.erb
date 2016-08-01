@@ -1,5 +1,9 @@
-<div class="text-center">
-<h1>Welcome, <%= @user.username %></h1>
+<body class="dashboard">
+  <div class="text-center">
+    <h1>Welcome, <%= @user.username %></h1>
+    <div class="well category-list">
 
-<h3><%= link_to "My Orders", orders_path %></h3>
+      <h3><%= link_to "My Orders", orders_path %></h3>
+    </div>
 </div>
+</body>

@@ -7,7 +7,7 @@ RSpec.feature "UserCanSeeEmptyCart" do
 
     visit cart_path
 
-    expect(page).to have_content("View Cart: 0")
+    expect(page).to have_content("View Cart (0)")
 
     expect(page).to have_content "Your cart is empty."
 
