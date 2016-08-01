@@ -1,11 +1,18 @@
-<h1>Create an Account</h1>
-<br>
-<%= form_for(@user) do |f| %>
-<%= f.label :username %>
-<%= f.text_field :username %>
-<br>
-<%= f.label :password %>
-<%= f.password_field :password %>
-<br>
-<%= f.submit "Create Account" %>
-<% end %>
+<body class="signup">
+  <h1>Create an Account</h1>
+  <br>
+  <div class ="well login">
+  <%= form_for(@user) do |f| %>
+     <%= f.label :username %>
+     <%= f.text_field :username %>
+  <br>
+     <%= f.label :password %>
+&nbsp<%= f.password_field :password %>
+  <br>
+     <%= f.submit "Create Account" %>
+  <% end %>
+  <br>
+  Already have an account?
+  <%= link_to "Login", login_path %>
+</div>
+</body>

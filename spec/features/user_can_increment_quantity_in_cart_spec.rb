@@ -11,12 +11,16 @@ RSpec.feature "UserCanIncrementQuantityInCart", type: :feature do
 
     click_on "View Cart"
 
-    expect(page).to have_content("View Cart: 1")
+    expect(page).to have_content("View Cart (1)")
+    click_on "+"
 
-    click_on "Add"
-
-    expect(page).to have_content("View Cart: 2")
     expect(current_path).to eq(cart_path)
+    expect(page).to have_content("View Cart (2)")
     expect(page).to have_content("Successfully added Tiger!")
+    click_on "-"
+
+    expect(current_path).to eq(cart_path)
+    expect(page).to have_content("View Cart (1)")
+    expect(page).to have_content("Successfully removed Tiger from your cart.")
   end
 end

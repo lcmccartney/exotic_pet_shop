@@ -1,15 +1,18 @@
 Rails.application.routes.draw do
-  root to: redirect('/animals')
+  root 'welcome#index'
+  # root to: redirect('/animals')
 
   resources :categories, only: [:index]
 
   resources :animals, only: [:show, :index]
 
-  resources :cart_animals, only: [:create, :destroy, :update]
+  resources :cart_animals, only: [:create, :destroy]
 
   resources :users, only: [:new, :create]
 
-  resources :orders, only: [:index]
+  resources :orders, only: [:index, :show, :create]
+
+  put '/cart_animals/:id', to: 'cart_animals#increment'
 
   get '/cart', to: 'cart_animals#index'
 
@@ -19,7 +22,12 @@ Rails.application.routes.draw do
 
   delete '/logout', to: 'sessions#destroy'
 
-  get '/dashboard', to: 'users#show', as: 'dashboard'
+  namespace :admin do
+    get '/dashboard', to: 'users#show'
+    patch '/dashboard', to: 'users#update'
+    resources :users, only: [:edit]
+  end
+    get '/dashboard', to: 'users#show'
 
   #keep this at the bottom - error message @category
   get "/:category_slug", to: 'categories#show'

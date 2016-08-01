@@ -1,0 +1,60 @@
+<body class="order-show-page">
+  <div class="container-fluid">
+  <h1 class="well order-table text-center">Order Number: <%= @order.id%></h1>
+   <br>
+
+  <div class="order-table well">
+    <div class="">Current Status: <b><%= @order.status %></b></div>
+    <% if @order.closed? %>
+    <div class="">Order <%= @order.status %> at <%= @order.updated_at %></div>
+    <br>
+    <% end %>
+    <div class="">Ordered at: <%= @order.created_at %></div>
+  <br>
+
+  <table class="order-table table table-bordered">
+   <thead>
+    <th><h4>Animal<h4></th>
+    <th><h4>Quantity</h4></th>
+    <th><h4>Subtotal</h4></th>
+   </thead>
+   <% @order.order_animals.each do |animal_order| %>
+   <tbody>
+       <td class="col-sm-8 col-md-6">
+         <div class="media">
+           <div class="pull-left"> <%= link_to image_tag(animal_order.animal.image_path, class: "media-object img-circle", width: "100", height: "100"), animal_path(animal_order.animal) %> </div>
+           <div class="media-body">
+              <h4 class="media-heading"><%= link_to animal_order.animal.name, animal_path(animal_order.animal)%></a></h4>
+              <h5 class="media-heading"><%= animal_order.animal.description %></h5>
+           </div>
+         </div>
+        </td>
+       <td><%= animal_order.quantity %></td>
+       <td>$<%= animal_order.subtotal %>.00</td>
+   </tbody>
+   <% end %>
+  </table>
+
+  <div class= "row">
+    <div class="col-md-2 col-md-offset-5">
+      <br>
+      <%= link_to "Return to All Orders", orders_path, class: "btn btn-lg btn-info" %>
+    </div>
+      <div class="col-md-offset-2 col-md-1">
+        <br>
+        <p>
+          <h4>
+            Total: <br>
+          </h4>
+        </p>
+      </div>
+      <div class="col-md-2">
+        <br>
+        <h4>
+          $<%= @order.total_price %>.00 <br>
+        </h4>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
