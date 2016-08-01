@@ -57,8 +57,7 @@ RSpec.describe Animal, type: :model do
       price: 3500,
       image_path: "http://wildaid.org/sites/default/files/photos/iStock_000008484745Large%20%20tiger%20-%20bengal.jpg"
     )
-
+    
     expect(Animal.all.count).to eq(1)
   end
-
 end
