@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   resources :categories, only: [:index]
 
-  resources :animals, only: [:show, :index]
+  resources :animals, only: [:show, :index, :new, :create]
 
   resources :cart_animals, only: [:create, :destroy]
 
