@@ -14,28 +14,35 @@
 
  @import "bootstrap-sprockets";
  @import "bootstrap";
+ @import url(https://fonts.googleapis.com/css?family=Lato);
 
- // #login-body, body {
- // /*css for full size background image*/
- //   background: url(http://p1.pichost.me/i/66/1910819.jpg) no-repeat center center fixed;
- //   -webkit-background-size: cover;
- //   -moz-background-size: cover;
- //   -o-background-size: cover;
- //   background-size: cover;
- //
- //   height: 100%;
- //   background-color: #060;
- //   color: #fff;
- //   text-align: center;
- //   text-shadow: 0 1px 3px rgba(0,0,0,.5);
- //
- // }
+// body {
+//   font-family: 'Lato';
+// }
 
-body {
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+.navbar-default {
+  background-color: rgba(150, 150, 150, .65);;
+  border: none;
+  font-family: 'Lato';
+  font-color: #FFFFFF;
+}
+
+.navbar-default .navbar-brand {
+  font-family: 'Lato';
+  font-size: 30px;
+  color: #FFF;
+}
+
+.navbar-default .navbar-nav > li > a {
+  padding: 20px 20px;
+  text-transform: uppercase;
+  cursor: auto;
+  font-family: 'Lato';
+  color: white;
+}
+.navbar-default .navbar-nav > li > a:hover {
+  text-decoration: underline;
+  color: white;
 }
 
 .order-show-page {
@@ -43,7 +50,41 @@ body {
 }
 
 body.login {
-  background: url("http://p1.pichost.me/i/66/1910819.jpg") no-repeat center center fixed;
+  padding-right: 80px;
+  padding-left: 80px;
+  background: url("https://wallpapers.pub/web/wallpapers/green-iguana/1920x1080.jpg") no-repeat center center fixed;
+  background-size: 100%;
+}
+
+body.signup {
+  padding-left: 80px;
+  background: url("https://wallpapers.pub/web/wallpapers/penguin-antarctica/1920x1080.jpg") no-repeat center center fixed;
+  background-size: 100%;
+}
+
+body.dashboard {
+  padding-left: 80px;
+  background: url("https://wallpapers.pub/web/wallpapers/hummingbird-hd/1920x1080.jpg") no-repeat center center fixed;
+  background-size: 100%;
+}
+
+img.animal-show {
+  width: 300px;
+  height: 300px;
+  border-radius: 10px 10px 10px 10px;
+  object-fit: cover;
+}
+
+body.animals-index {
+  background-color: #c9c9c9;
+  background-size: 100%;
+}
+
+img.animal-cart {
+  width: 100px;
+  height: 100px;
+  border-radius: 90px 90px 90px 90px;
+  object-fit: cover;
 }
 
 .animal {
@@ -71,6 +112,7 @@ body.login {
 }
 
 .category-index {
+  padding-top: 80px;
   background: url("http://cdn.wallpapersafari.com/0/30/Iu7N1E.jpg") no-repeat center center fixed;
   background-size: 100%;
 }
@@ -98,7 +140,8 @@ body.login {
 }
 
 .order-index {
-  background: url("http://wallpapers.hdwallpaperhdpictures.in/plog-content/images/wallpapers/animal-wallpapers-pictures/033-exotic-parrot-wallpaper-animal.jpg") no-repeat center center fixed;
+  background: url("https://wallpapers.pub/web/wallpapers/birds-water-spray-wallpaper/1920x1080.jpg") no-repeat center center fixed;
+  background-size: 100%;
 }
 
 .order-index-table {
@@ -114,11 +157,6 @@ body.login {
 .well.login {
   background-color: rgba(245, 245, 245, 0.4);
   max-width: 25%;
-}
-
-.navbar-brand {
-  font-family: Impact;
-  font-size: 30px;
 }
 
 #wrapper {
@@ -162,8 +200,8 @@ body.login {
 
 .pin img {
 	width: 100%;
-	border-bottom: 1px solid #ccc;
-	padding-bottom: 15px;
+	// border-bottom: 1px solid #ccc;
+	padding-bottom: 5px;
 	margin-bottom: 5px;
 }
 
@@ -187,4 +225,125 @@ body.login {
 		-moz-column-count: 5;
 		column-count: 5;
 	}
+}
+
+/********************************/
+/*       Fade Bs-carousel       */
+/********************************/
+.fade-carousel {
+    position: relative;
+    height: 100vh;
+}
+.fade-carousel .carousel-inner .item {
+    height: 100vh;
+}
+.fade-carousel .carousel-indicators > li {
+    margin: 0 2px;
+    background-color: #f39c12;
+    border-color: #f39c12;
+    opacity: .7;
+}
+.fade-carousel .carousel-indicators > li.active {
+  width: 10px;
+  height: 10px;
+  opacity: 1;
+}
+
+/********************************/
+/*          Hero Headers        */
+/********************************/
+.hero {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 3;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 0 rgba(0,0,0,.75);
+      -webkit-transform: translate3d(-50%,-50%,0);
+         -moz-transform: translate3d(-50%,-50%,0);
+          -ms-transform: translate3d(-50%,-50%,0);
+           -o-transform: translate3d(-50%,-50%,0);
+              transform: translate3d(-50%,-50%,0);
+}
+.hero h1 {
+    font-size: 6em;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+}
+
+.fade-carousel .carousel-inner .item .hero {
+    opacity: 0;
+    -webkit-transition: 10s all ease-in-out .1s;
+       -moz-transition: 2s all ease-in-out .1s;
+        -ms-transition: 2s all ease-in-out .1s;
+         -o-transition: 2s all ease-in-out .1s;
+            transition: 2s all ease-in-out .1s;
+}
+.fade-carousel .carousel-inner .item.active .hero {
+    opacity: 1;
+    -webkit-transition: 2s all ease-in-out .1s;
+       -moz-transition: 2s all ease-in-out .1s;
+        -ms-transition: 2s all ease-in-out .1s;
+         -o-transition: 2s all ease-in-out .1s;
+            transition: 2s all ease-in-out .1s;
+}
+
+
+/********************************/
+/*            Overlay           */
+/********************************/
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background-color: #080d15;
+    opacity: .7;
+}
+
+/********************************/
+/*          Custom Buttons      */
+/********************************/
+.btn.btn-lg {padding: 10px 40px;}
+.btn.btn-hero,
+.btn.btn-hero:hover,
+.btn.btn-hero:focus {
+    color: #f5f5f5;
+    background-color: #1abc9c;
+    border-color: #1abc9c;
+    outline: none;
+    margin: 20px auto;
+}
+
+/********************************/
+/*       Slides backgrounds     */
+/********************************/
+.fade-carousel .slides .slide-1,
+.fade-carousel .slides .slide-2,
+.fade-carousel .slides .slide-3 {
+  height: 100vh;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.fade-carousel .slides .slide-1 {
+  background-image: url(https://wallpapers.pub/web/wallpapers/tiger-portrait/3840x2160.jpg);
+}
+.fade-carousel .slides .slide-2 {
+  background-image: url(https://wallpapers.pub/web/wallpapers/common-basilisk-lizard/1920x1080.jpg);
+}
+.fade-carousel .slides .slide-3 {
+  background-image: url(http://best-wallpaper.net/wallpaper/1920x1440/1504/Monkey-play-football_1920x1440.jpg);
+}
+
+.footer {
+  background-color: #fff;
+  position: relative;
+  margin-top: -150px;
+  height: 150px;
+  clear:both;
+  padding-top:20px;
 }
