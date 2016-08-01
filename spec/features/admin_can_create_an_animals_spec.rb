@@ -38,9 +38,4 @@ RSpec.feature "AdminCanCreateAnAnimals", type: :feature do
     expect(page).to have_content(9000)
     expect(animal.category.name).to eq("Big Cats")
   end
-
-  xscenario "cannot create duplicate animal" do
-  # - The title must be unique for all items in the system.
-  end
-
 end
