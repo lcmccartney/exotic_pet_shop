@@ -16,9 +16,9 @@ class AnimalsController < ApplicationController
 
   def create
     category = Category.find(params[:category_id])
-    @animal = category.animals.new(animal_params)
-    if @animal.save
-      flash[:success] = "Successfully created #{@animal.name}"
+    animal = category.animals.new(animal_params)
+    if animal.save
+      flash[:success] = "Successfully created #{animal.name}"
       redirect_to new_animal_path
     else
       flash.now[:danger] = "Invalid parameters"
