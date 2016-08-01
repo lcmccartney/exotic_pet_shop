@@ -1,13 +1,15 @@
 <body class="animal">
   <div class="text-center">
+    <br><br>
     <div class="well animal-info">
     <h3><%= @animal.name %></h3>
     <br>
-    <%= image_tag(@animal.image_path, size: "300", :class => "img-rounded") %>
+    <img src="<%= @animal.image_path %>", class="animal-show">
+    <!-- <%= image_tag(@animal.image_path, size: "300", :class => "img-rounded") %> -->
     <br><br>
     <%= @animal.description %>
     <br><br>
-    <strong>Price: $<%= @animal.price %></strong>
+    <strong>Price: $<%= @animal.price %>.00</strong>
     <br>
     <% if @animal.extinct? %>
     <h3>This Animal is Extinct</h3>

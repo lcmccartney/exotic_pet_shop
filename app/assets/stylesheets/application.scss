@@ -16,6 +16,10 @@
  @import "bootstrap";
  @import url(https://fonts.googleapis.com/css?family=Lato);
 
+// body {
+//   font-family: 'Lato';
+// }
+
 .navbar-default {
   background-color: rgba(150, 150, 150, .65);;
   border: none;
@@ -46,6 +50,7 @@
 }
 
 body.login {
+  padding-right: 80px;
   padding-left: 80px;
   background: url("https://wallpapers.pub/web/wallpapers/green-iguana/1920x1080.jpg") no-repeat center center fixed;
   background-size: 100%;
@@ -61,6 +66,25 @@ body.dashboard {
   padding-left: 80px;
   background: url("https://wallpapers.pub/web/wallpapers/hummingbird-hd/1920x1080.jpg") no-repeat center center fixed;
   background-size: 100%;
+}
+
+img.animal-show {
+  width: 300px;
+  height: 300px;
+  border-radius: 10px 10px 10px 10px;
+  object-fit: cover;
+}
+
+body.animals-index {
+  background-color: #c9c9c9;
+  background-size: 100%;
+}
+
+img.animal-cart {
+  width: 100px;
+  height: 100px;
+  border-radius: 90px 90px 90px 90px;
+  object-fit: cover;
 }
 
 .animal {
@@ -116,7 +140,8 @@ body.dashboard {
 }
 
 .order-index {
-  background: url("http://wallpapers.hdwallpaperhdpictures.in/plog-content/images/wallpapers/animal-wallpapers-pictures/033-exotic-parrot-wallpaper-animal.jpg") no-repeat center center fixed;
+  background: url("https://wallpapers.pub/web/wallpapers/birds-water-spray-wallpaper/1920x1080.jpg") no-repeat center center fixed;
+  background-size: 100%;
 }
 
 .order-index-table {
@@ -175,8 +200,8 @@ body.dashboard {
 
 .pin img {
 	width: 100%;
-	border-bottom: 1px solid #ccc;
-	padding-bottom: 15px;
+	// border-bottom: 1px solid #ccc;
+	padding-bottom: 5px;
 	margin-bottom: 5px;
 }
 
@@ -308,15 +333,16 @@ body.dashboard {
   background-image: url(https://wallpapers.pub/web/wallpapers/tiger-portrait/3840x2160.jpg);
 }
 .fade-carousel .slides .slide-2 {
-  background-image: url(http://best-wallpaper.net/wallpaper/1920x1080/1110/Chameleon-on-flower_1920x1080.jpg);
+  background-image: url(https://wallpapers.pub/web/wallpapers/common-basilisk-lizard/1920x1080.jpg);
 }
 .fade-carousel .slides .slide-3 {
   background-image: url(http://best-wallpaper.net/wallpaper/1920x1440/1504/Monkey-play-football_1920x1440.jpg);
 }
 
 .footer {
+  background-color: #fff;
   position: relative;
-  margin-top: -150px; /* negative value of footer height */
+  margin-top: -150px;
   height: 150px;
   clear:both;
   padding-top:20px;
