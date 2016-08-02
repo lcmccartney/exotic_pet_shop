@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   resources :categories, only: [:index]
 
-  resources :animals, only: [:show, :index, :new, :create]
+  resources :animals, only: [:show, :index, :new, :create, :update]
 
   resources :cart_animals, only: [:create, :destroy]
 
@@ -25,6 +25,7 @@ Rails.application.routes.draw do
   namespace :admin do
     get '/dashboard', to: 'users#show'
     patch '/dashboard', to: 'users#update'
+    resources :animals, only: [:index, :edit]
     resources :users, only: [:edit]
   end
     get '/dashboard', to: 'users#show'
