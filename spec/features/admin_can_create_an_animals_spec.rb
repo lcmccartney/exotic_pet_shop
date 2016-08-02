@@ -17,16 +17,13 @@ RSpec.feature "AdminCanCreateAnAnimals", type: :feature do
     click_on("Create an Animal")
 
     expect(current_path).to eq(new_animal_path)
-
     fill_in "Name", with: "Cougar"
     fill_in "Description", with: "Active in the day"
     fill_in "Price", with: 9000
+    fill_in "Image path", with: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Puma_face.jpg/800px-Puma_face.jpg"
     select "Big Cats"
-    fill_in "Image", with: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Puma_face.jpg/800px-Puma_face.jpg"
     click_on "Create"
-
     animal = Animal.last
-
     expect(current_path).to eq(new_animal_path)
     expect(page).to have_content("Successfully created #{animal.name}")
 
