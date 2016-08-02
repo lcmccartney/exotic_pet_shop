@@ -1,23 +1,22 @@
 <body class="animal-show">
-
-<div class="text-center">
-  <div class="well animal-name">
-<h1><%= @category.name %></h1>
-</div>
-<br>
-<% @category.animals.each do |animal| %>
-  <div class="row animal-info">
-    <div class="col-md-4 animal-image", align="left">
-      <%= link_to image_tag(animal.image_path, size: "150", class: "img-circle"), animal_path(animal) %>
+  <div class="text-center">
+    <div class="well animal-name">
+      <h1><%= @category.name %></h1>
     </div>
-    <br><br>
-    <div class="col-md-6">
-      <h1>
-      <%= link_to animal.name, animal_path(animal) %>
-    </h1>
+    <br>
+    <% @category.animals.each do |animal| %>
+    <div class="row animal-info">
+      <div class="col-md-4 animal-image", align="left">
+        <%= link_to image_tag(animal.image_path, size: "150", class: "img-circle"), animal_path(animal) %>
+      </div>
+      <br><br>
+      <div class="col-md-6">
+        <h1>
+          <%= link_to animal.name, animal_path(animal) %>
+        </h1>
+      </div>
     </div>
-</div>
-  <br>
-<% end %>
-</div>
+    <br>
+    <% end %>
+  </div>
 </body>
