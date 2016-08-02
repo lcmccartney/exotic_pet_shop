@@ -3,9 +3,10 @@
     <h1>Welcome, <%= @user.username %></h1>
     <h3>Admin Dashboard</h3>
     <div class ="well category-list">
-      <h3><i class=""<%= link_to "My Orders", orders_path %></h3>
+      <h3><%= link_to "My Orders", orders_path %></h3>
       <h3><%= link_to "Edit Account", edit_admin_user_path(current_user) %></h3>
       <h3><%= link_to "Create an Animal", new_animal_path %></h3>
+      <h3><%= link_to "Edit Animals", admin_animals_path %></h3>
     </div>
   </div>
 </body>
