@@ -15,10 +15,11 @@
  @import "bootstrap-sprockets";
  @import "bootstrap";
  @import url(https://fonts.googleapis.com/css?family=Lato);
+ @import url(https://fonts.googleapis.com/css?family=Taviraj);
 
-// body {
-//   font-family: 'Lato';
-// }
+body {
+  font-family: 'Lato';
+}
 
 .navbar-default {
   background-color: rgba(150, 150, 150, .65);;
@@ -45,27 +46,108 @@
   color: white;
 }
 
+.btn-styled {
+  font-family: 'Lato';
+  padding: 5px;
+}
+
+.btn-fancy {
+  color: #f5f5f5;
+  background-color: #1abc9c;
+  border-color: #1abc9c;
+  outline: none;
+  margin: 20px auto;
+}
+
+.title {
+  text-transform: uppercase;
+  text-shadow: 1px 1px 0 rgba(0,0,0,.75);
+    -webkit-transform: translate3d(-50%,-50%,0);
+       -moz-transform: translate3d(-50%,-50%,0);
+        -ms-transform: translate3d(-50%,-50%,0);
+         -o-transform: translate3d(-50%,-50%,0);
+            transform: translate3d(-50%,-50%,0);
+}
+
+body.login {
+  background: url("https://wallpapers.pub/web/wallpapers/green-iguana/1920x1080.jpg") no-repeat center center fixed;
+}
+
+body.login,
+body.signup,
+body.create-animal,
+body.dashboard,
+body.admin-dashboard,
+body.animals-index {
+  padding-left: 80px;
+  padding-left: 80px;
+  background-size: 100%;
+}
+
+.category-index {
+  padding-top: 80px;
+  background: url("http://cdn.wallpapersafari.com/0/30/Iu7N1E.jpg") no-repeat center center fixed;
+  background-size: 100%;
+}
+
+.empty-cart {
+  background: url("http://img2.rnkr-static.com/list_img_v2/8544/2108544/full/funny-bird-names-u2.jpg") no-repeat center center fixed;
+  background-size: 100%;
+}
+
+.full-cart {
+  background: url("https://pixabay.com/static/uploads/photo/2014/08/01/00/08/pier-407252_960_720.jpg") no-repeat center center fixed;
+  background-size: 100%;
+}
+
+.animal {
+  background: url("http://project4gallery.com/wp-content/uploads/2016/03/landscape_amazing_nature_quality_lake_background_picture-84.jpg") no-repeat center center fixed;
+}
+
+.animal-show {
+  background: url("http://smsranjish.com/wp-content/uploads/2015/08/Jungle-River-HD-Wallpapers.jpg") no-repeat center center fixed;
+}
+
+.order-index {
+  background: url("https://wallpapers.pub/web/wallpapers/birds-water-spray-wallpaper/1920x1080.jpg") no-repeat center center fixed;
+  background-size: 100%;
+}
+
 .order-show-page {
   background: url("https://aos.iacpublishinglabs.com/question/aq/1400px-788px/natural-resources-african-savanna_5e4deadc068a7348.jpg?domain=cx.aos.ask.com") no-repeat center center fixed;
 }
 
-body.login {
-  padding-right: 80px;
-  padding-left: 80px;
-  background: url("https://wallpapers.pub/web/wallpapers/green-iguana/1920x1080.jpg") no-repeat center center fixed;
-  background-size: 100%;
+body.animals-index {
+  background-color: #c9c9c9;
 }
 
 body.signup {
-  padding-left: 80px;
   background: url("https://wallpapers.pub/web/wallpapers/penguin-antarctica/1920x1080.jpg") no-repeat center center fixed;
-  background-size: 100%;
+}
+
+body.create-animal {
+  background: url("https://wallpapers.pub/web/wallpapers/king-of-beasts/1920x1080.jpg") no-repeat center center fixed;
 }
 
 body.dashboard {
-  padding-left: 80px;
   background: url("https://wallpapers.pub/web/wallpapers/hummingbird-hd/1920x1080.jpg") no-repeat center center fixed;
-  background-size: 100%;
+}
+
+body.admin-dashboard {
+  background: url("https://wallpapers.pub/web/wallpapers/humpback-whale-tail/1920x1080.jpg") no-repeat center center fixed;
+}
+
+.new-form {
+  background-color: rgba(245, 245, 245, 0.7);
+  margin: left;
+  max-width: 30%;
+  padding: 20px 20px 20px 20px;
+}
+
+table.form > tr > td {
+  font-size: 16px;
+  font-weight: bold;
+  padding: 20px 20px 20px 20px;
 }
 
 img.animal-show {
@@ -75,11 +157,6 @@ img.animal-show {
   object-fit: cover;
 }
 
-body.animals-index {
-  background-color: #c9c9c9;
-  background-size: 100%;
-}
-
 img.animal-cart {
   width: 100px;
   height: 100px;
@@ -87,12 +164,11 @@ img.animal-cart {
   object-fit: cover;
 }
 
-.animal {
-  background: url("http://project4gallery.com/wp-content/uploads/2016/03/landscape_amazing_nature_quality_lake_background_picture-84.jpg") no-repeat center center fixed;
-}
-
-.animal-show {
-  background: url("http://smsranjish.com/wp-content/uploads/2015/08/Jungle-River-HD-Wallpapers.jpg") no-repeat center center fixed;
+h1.header-white {
+  color: #fff;
+  text-transform: uppercase;
+  font-family: 'Taviraj';
+  font-style: italic;
 }
 
 .animal-info {
@@ -111,13 +187,8 @@ img.animal-cart {
   padding: 10px;
 }
 
-.category-index {
-  padding-top: 80px;
-  background: url("http://cdn.wallpapersafari.com/0/30/Iu7N1E.jpg") no-repeat center center fixed;
-  background-size: 100%;
-}
-
 .category-header {
+  padding-top: 60px;
   background-color: rgba(245, 245, 245, 0.6);
   margin: auto;
   max-width: 40%;
@@ -129,21 +200,6 @@ img.animal-cart {
   max-width: 40%;
 }
 
-.empty-cart {
-  background: url("http://img2.rnkr-static.com/list_img_v2/8544/2108544/full/funny-bird-names-u2.jpg") no-repeat center center fixed;
-  background-size: 100%;
-}
-
-.full-cart {
-  background: url("https://pixabay.com/static/uploads/photo/2014/08/01/00/08/pier-407252_960_720.jpg") no-repeat center center fixed;
-  background-size: 100%;
-}
-
-.order-index {
-  background: url("https://wallpapers.pub/web/wallpapers/birds-water-spray-wallpaper/1920x1080.jpg") no-repeat center center fixed;
-  background-size: 100%;
-}
-
 .order-index-table {
   background-color: rgba(245, 245, 245, 0.8);
   margin: auto;
@@ -152,11 +208,6 @@ img.animal-cart {
 .order-table {
   background-color: rgba(245, 245, 245, 0.7);
   margin: auto;
-}
-
-.well.login {
-  background-color: rgba(245, 245, 245, 0.4);
-  max-width: 25%;
 }
 
 #wrapper {
@@ -227,9 +278,6 @@ img.animal-cart {
 	}
 }
 
-/********************************/
-/*       Fade Bs-carousel       */
-/********************************/
 .fade-carousel {
     position: relative;
     height: 100vh;
@@ -249,9 +297,6 @@ img.animal-cart {
   opacity: 1;
 }
 
-/********************************/
-/*          Hero Headers        */
-/********************************/
 .hero {
     position: absolute;
     top: 50%;
@@ -291,22 +336,6 @@ img.animal-cart {
             transition: 2s all ease-in-out .1s;
 }
 
-
-/********************************/
-/*            Overlay           */
-/********************************/
-.overlay {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: 2;
-    background-color: #080d15;
-    opacity: .7;
-}
-
-/********************************/
-/*          Custom Buttons      */
-/********************************/
 .btn.btn-lg {padding: 10px 40px;}
 .btn.btn-hero,
 .btn.btn-hero:hover,
@@ -318,9 +347,6 @@ img.animal-cart {
     margin: 20px auto;
 }
 
-/********************************/
-/*       Slides backgrounds     */
-/********************************/
 .fade-carousel .slides .slide-1,
 .fade-carousel .slides .slide-2,
 .fade-carousel .slides .slide-3 {
@@ -337,6 +363,10 @@ img.animal-cart {
 }
 .fade-carousel .slides .slide-3 {
   background-image: url(http://best-wallpaper.net/wallpaper/1920x1440/1504/Monkey-play-football_1920x1440.jpg);
+}
+
+.section {
+  padding: 20px 20px 20px 20px;
 }
 
 .footer {

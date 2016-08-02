@@ -1,9 +1,11 @@
 <br><br>
 <% if @cart.contents.empty? %>
   <body class="empty-cart">
+    <div class="well category-header">
       <center><h1>Your cart is empty.</h1>
       <br>
       <%= link_to "Add some animals!", animals_path, class: "btn btn-lg btn-primary"%></center>
+    </div>
   </body>
 <% else %>
   <body class="full-cart">
