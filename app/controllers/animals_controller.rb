@@ -1,5 +1,5 @@
 class AnimalsController < ApplicationController
-  before_action :current_admin?, only: [:new, :create]
+  before_action :current_admin?, only: [:new, :create, :update]
 
   def show
     @animal = Animal.find(params[:id])
@@ -26,9 +26,20 @@ class AnimalsController < ApplicationController
     end
   end
 
+  def update
+    animal = Animal.find(params[:id])
+    if animal.update(animal_params)
+      flash[:success] = "Successfully updated!"
+      redirect_to admin_animals_path
+    else
+      flash.now[:danger] = "Invalid parameters"
+      render :new
+    end
+  end
+
   private
 
   def animal_params
-    params.require(:animal).permit(:name, :description, :price, :image_path)
+    params.require(:animal).permit(:name, :description, :price, :image_path, :status)
   end
 end
