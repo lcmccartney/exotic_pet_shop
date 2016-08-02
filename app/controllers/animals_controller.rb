@@ -17,6 +17,7 @@ class AnimalsController < ApplicationController
   def create
     category = Category.find(params[:category_id])
     animal = category.animals.new(animal_params)
+    animal[:image_path] = animal.default_image if animal[:image_path].blank?
     if animal.save
       flash[:success] = "Successfully created #{animal.name}"
       redirect_to new_animal_path
