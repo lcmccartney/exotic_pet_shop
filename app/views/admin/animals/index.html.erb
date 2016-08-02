@@ -1,0 +1,6 @@
+<h1>Admin's Animals</h1>
+<% @animals.each do |animal|%>
+&nbsp&nbsp<%= animal.name %>
+<%= link_to "Edit", edit_admin_animal_path(animal)  %>
+<br>
+<% end %>

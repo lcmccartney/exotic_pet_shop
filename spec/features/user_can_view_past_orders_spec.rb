@@ -41,7 +41,7 @@ RSpec.feature "UserCanViewPastOrders", type: :feature do
 
     click_on "+"
 
-    expect(page).to have_content(6000)
+    expect(page).to have_content('6,000')
 
     visit "/animals/#{lion.id}"
 
@@ -49,8 +49,8 @@ RSpec.feature "UserCanViewPastOrders", type: :feature do
 
     visit cart_path
 
-    expect(page).to have_content(7000)
-    expect(page).to have_content(13000)
+    expect(page).to have_content('7,000')
+    expect(page).to have_content('13,000')
 
     click_on "Login or Create Account to Checkout"
 
@@ -69,12 +69,12 @@ RSpec.feature "UserCanViewPastOrders", type: :feature do
     expect(page).to have_content(order.status)
     expect(page).to have_content("Tiger")
     expect(page).to have_content("2")
-    expect(page).to have_content(6000)
+    expect(page).to have_content('6,000')
     expect(page).to have_content("1")
     expect(page).to have_content("Lion")
-    expect(page).to have_content(7000)
+    expect(page).to have_content('7,000')
     expect(page).to have_content("Total")
-    expect(page).to have_content(13000)
+    expect(page).to have_content('13,000')
     expect(page).to have_content(order.created_at)
   end
 end

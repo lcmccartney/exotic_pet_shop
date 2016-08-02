@@ -9,7 +9,7 @@
     <br><br>
     <%= @animal.description %>
     <br><br>
-    <strong>Price: $<%= @animal.price %>.00</strong>
+    <strong>Price: <%= number_to_currency(@animal.price) %></strong>
     <br>
     <% if @animal.extinct? %>
     <h3>This Animal is Extinct</h3>
