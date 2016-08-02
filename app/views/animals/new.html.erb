@@ -6,28 +6,23 @@
   <div class ="well new-form">
     <table class="form">
       <%= form_for(@animal) do |f| %>
-      <tr>
-        <td>Name: </td>
-        <td><%= f.text_field :name %></td>
-      </tr>
-      <tr>
-        <td>Description: </td>
-        <td><%= f.text_field :description %></td>
-      </tr>
-      <tr>
-        <td>Price: </td>
-        <td><%= f.text_field :price %></td>
-      </tr>
-      <tr>
-        <td>Image: </td>
-        <td><%= f.text_field :image_path %></td>
-      </tr>
-      <tr>
-        <td>Category: </td>
-        <td><%= select_tag(:category_id, options_for_select(@categories)) %></td>
-      </tr>
-    </table>
-    <%= f.submit "Create", class: "btn btn-hero" %>
-    <% end %>
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+      <br>
+      <%= f.label :description %>
+      <%= f.text_field :description %>
+      <br>
+      <%= f.label :price %>
+      <%= f.text_field :price %>
+      <br>
+      <%= f.label :image_path %>
+      <%= f.text_field :image_path %>
+      <br>
+       <%= f.label :categories %>
+       <%#= f.select :category_id, options_for_select(Category.all.pluck(:id)) %>
+       <%= select_tag(:category_id, options_for_select(@categories)) %>
+       <br>
+       <%= f.submit "Create" %>
+       <% end %>
   </div>
 </body>
