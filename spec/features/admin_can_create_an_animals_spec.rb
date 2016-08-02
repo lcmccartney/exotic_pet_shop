@@ -69,6 +69,5 @@ RSpec.feature "AdminCanCreateAnAnimals", type: :feature do
     expect(page).to have_content('9,000')
     expect(animal.category.name).to eq("Big Cats")
     expect(page).to have_xpath("//img[@src='https://s-media-cache-ak0.pinimg.com/564x/13/05/6d/13056dae918b65e94c7d36e885c30398.jpg']")
-
   end
 end
