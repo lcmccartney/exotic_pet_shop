@@ -3,7 +3,7 @@ class UserNotifier < ActionMailer::Base
 
   def send_signup_email(user)
     @user = user
-    mail( :to => @user.email,
-    :subject => 'Welcome to Fancy Beast' )
+    mail(:to => @user.email,
+    :subject => 'Welcome to Fancy Beast')
   end
 end
