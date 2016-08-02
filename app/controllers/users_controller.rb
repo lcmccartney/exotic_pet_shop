@@ -14,9 +14,10 @@ class UsersController < ApplicationController
   end
 
   def create
-    user = User.new(user_params)
-    if user.save
-      session[:user_id] = user.id
+    @user = User.new(user_params)
+    if @user.save
+      session[:user_id] = @user.id
+      UserNotifier.send_signup_email(@user).deliver if @user.email.present?
       flash[:success] = "You have successfully created a new account."
       redirect_to cart_path if @cart.contents.any?
       redirect_to dashboard_path if @cart.contents.empty?
@@ -29,6 +30,6 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:username, :password)
+    params.require(:user).permit(:username, :password, :email)
   end
 end
