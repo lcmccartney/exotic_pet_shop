@@ -5,14 +5,14 @@ RSpec.feature "GuestCannotViewUnauthorizedPages", type: :feature do
     scenario "they cannot view another user's private data" do
       visit admin_dashboard_path
 
-      expect(page).to have_content("The page you were looking for doesn't exist (404)")
+      expect(page).to have_content("404")
 
     end
 
     scenario "they cannot view any admin capablities" do
       visit admin_dashboard_path
 
-      expect(page).to have_content("The page you were looking for doesn't exist (404)")
+      expect(page).to have_content("404")
     end
 
     scenario "they cannot view an orders page" do
