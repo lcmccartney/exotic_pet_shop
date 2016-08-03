@@ -12,7 +12,7 @@ RSpec.feature "UserCanRemoveAnimalFromCart" do
 
     click_on "View Cart"
 
-    expect(page).to have_content(7000)
+    expect(page).to have_content('7,000')
     expect(page).to have_content("View Cart (2)")
 
     click_on "Remove"

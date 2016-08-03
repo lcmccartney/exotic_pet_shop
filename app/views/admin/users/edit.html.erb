@@ -1,13 +1,15 @@
-<h1>Edit Account</h1>
-<br>
-<%= form_for(@user, url: admin_dashboard_path(@user.id)) do |f| %>
-<%= f.label :username %>
-<%= f.text_field :username %>
-<br>
-<%= f.label :password %>
-<%= f.password_field :password %>
-<br>
-<%= f.submit "Update" %>
-<% end %>
-
+<body class="signup">
+  <h1>Edit Account</h1>
+  <br>
+  <div class ="well new-form">
+    <%= form_for(@user, url: admin_dashboard_path(@user.id)) do |f| %>
+     <%= f.label :username %>
+     <%= f.text_field :username %>
+  <br>
+     <%= f.label :password %>
+&nbsp<%= f.password_field :password %>
+  <br>
+     <%= f.submit "Update", class: "btn btn-lg" %>
+  <% end %>
 </div>
+</body>

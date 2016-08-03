@@ -21,8 +21,8 @@ RSpec.feature "UserCanOnlyViewOwnData", type: :feature do
     visit orders_path
     click_on("View Order Details")
 
-    expect(page).to have_content(7000)
-    expect(page).to have_no_content(10000)
+    expect(page).to have_content('7,000')
+    expect(page).to have_no_content('10,000')
   end
 
   scenario "they cannot view another user's private data" do

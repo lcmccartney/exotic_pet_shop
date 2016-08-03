@@ -7,6 +7,10 @@ class Category < ActiveRecord::Base
 
   has_many :animals
 
+  def self.all_names
+    all.map{ |category| [ category.name, category.id ] }
+  end
+
 private
 
   def create_slug

@@ -5,12 +5,11 @@ RSpec.feature "UserCanSeeCategories", type: :feature do
     category = Category.create(name: "Big Cats")
 
     visit categories_path
-    
+
     expect(page).to have_content("Big Cats")
 
     click_on "Big Cats"
 
     expect(current_path).to eq('/big-cats')
   end
-
 end

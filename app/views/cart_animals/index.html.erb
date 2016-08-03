@@ -1,9 +1,11 @@
 <br><br>
 <% if @cart.contents.empty? %>
   <body class="empty-cart">
+    <div class="well category-header">
       <center><h1>Your cart is empty.</h1>
       <br>
       <%= link_to "Add some animals!", animals_path, class: "btn btn-lg btn-primary"%></center>
+    </div>
   </body>
 <% else %>
   <body class="full-cart">
@@ -42,8 +44,8 @@
                               <%= link_to "Remove", cart_animal_path(animal.id), method: :delete, class: "btn"%>
                             </td>
 
-                            <td class="col-sm-1 col-md-1 text-center"><strong>$<%= animal.price %>.00</strong></td>
-                            <td class="col-sm-1 col-md-1 text-center"><strong>$<%= animal.price * @cart.count_of(animal.id) %>.00</strong></td>
+                            <td class="col-sm-1 col-md-1 text-center"><strong><%= number_to_currency(animal.price) %></strong></td>
+                            <td class="col-sm-1 col-md-1 text-center"><strong><%= number_to_currency(animal.price * @cart.count_of(animal.id)) %></strong></td>
 
                         </tr>
                         <% end %>
@@ -58,7 +60,7 @@
                             <td>   </td>
                             <td>   </td>
                             <td><h3>Total</h3></td>
-                            <td class="text-right"><h3><strong>$<%= @cart.total_price %>.00</strong></h3></td>
+                            <td class="text-right"><h3><strong><%= number_to_currency(@cart.total_price) %></strong></h3></td>
                         </tr>
                         <tr>
                             <td>   </td>
@@ -80,18 +82,3 @@
     </div>
   </body>
 <% end %>
-
-<!-- <% @cart.contents.each do |animal_id, quantity| %>
-  <img src="<%= Animal.find(animal_id.to_i).image_path %>" height = "200">
-  <b><%= Animal.find(animal_id.to_i).name %></b> -
-  <%= Animal.find(animal_id.to_i).description %>
-  Quantity: <%= quantity %>
-  $<%= Animal.find(animal_id.to_i).price * @cart.count_of(animal_id) %>
-  <br><br>
-  <%= link_to "Remove", cart_animal_path(animal_id), method: :delete, class: "btn btn-warning" %>
-  <%= button_to "Add", cart_animal_path(animal_id), method: :put, class: "btn btn-success"%>
-<% end %>
-
-Total Cost: $<%= @cart.total_price %>
-<br><br>
-<%= link_to "Login or Create Account to Checkout", login_path, class: "btn btn-success" if current_user.nil? %> -->

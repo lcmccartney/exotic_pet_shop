@@ -1,13 +1,16 @@
 <body class="signup">
   <h1>Create an Account</h1>
   <br>
-  <div class ="well login">
+  <div class ="well new-form">
   <%= form_for(@user) do |f| %>
      <%= f.label :username %>
      <%= f.text_field :username %>
   <br>
      <%= f.label :password %>
 &nbsp<%= f.password_field :password %>
+  <br>
+     <%= f.label :email %>
+     <%= f.text_field :email %>
   <br>
      <%= f.submit "Create Account" %>
   <% end %>

@@ -1,15 +1,14 @@
 <body class="category-index">
+  <div class="text-center">
+    <div class="well category-header">
+      <h1>Categories</h1>
+    </div>
+    <br><br>
+    <div class="well category-list">
 
-<div class="text-center">
-  <div class="well category-header">
-<h1>Categories</h1>
-</div>
-<br><br>
-<div class="well category-list">
-
-<% @categories.each do |category| %>
-  <h3><%= link_to category.name, category.slug %><h3>
-<% end %>
-</div>
-</div>
-</body>
+      <% @categories.each do |category| %>
+      <h3><%= link_to category.name, category.slug %><h3>
+        <% end %>
+      </div>
+    </div>
+  </body>
