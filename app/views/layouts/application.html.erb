@@ -8,11 +8,9 @@
 </head>
 <body style="padding-top: 60px;">
   <%= render partial: "layouts/navbar" %>
-  <% flash.each do |type, message| %>
-  <%= content_tag :div, sanitize(message), class: "alert alert-#{type}" %>
-  <% end %>
+  <%= render partial: "layouts/flash" %>
 
  <%= yield %>
-
+ 
 </body>
 </html>
