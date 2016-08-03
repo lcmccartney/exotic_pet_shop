@@ -373,11 +373,29 @@ h1.header-white {
   padding: 20px 20px 20px 20px;
 }
 
-.footer {
-  background-color: #fff;
-  position: relative;
-  margin-top: -150px;
-  height: 150px;
-  clear:both;
-  padding-top:20px;
+#about-us {
+  padding: 40px;
+}
+.divider {
+  background-color: #00a6c2;
+  max-width: 100%
+}
+
+h5.bottom {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 36px;
+  margin: auto;
+}
+
+.global-footer {
+    background-color: #c2c2c2;
+    border-top: 1px solid #eee;
+    color: #393939;
+    line-height: 18px;
+    overflow: hidden;
+    margin-top: 60px;
+    padding: 20px;
+    text-align: center;
 }
