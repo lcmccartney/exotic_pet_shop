@@ -138,7 +138,7 @@ body.admin-dashboard {
 }
 
 body.admin-animals {
-  background: url("https://wallpapers.pub/web/wallpapers/jaguar-in-mountains/1920x1080.jpg")
+  background: url("https://wallpapers.pub/web/wallpapers/jaguar-in-mountains/1920x1080.jpg");
 }
 
 .admin-animal-list {
@@ -195,8 +195,8 @@ h1.header-white {
   background-color: rgba(245, 245, 245, 0.7);
   margin: auto;
   max-width: 40%;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, .75);
   text-transform: uppercase;
-  text-shadow: 1px 1px 0 rgba(0,0,0,.75);
 }
 
 .animal-name {
