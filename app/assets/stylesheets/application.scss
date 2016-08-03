@@ -41,8 +41,17 @@ body {
   font-family: 'Lato';
   color: white;
 }
+
 .navbar-default .navbar-nav > li > a:hover {
   text-decoration: underline;
+  color: white;
+}
+
+.navbar-default .navbar-nav {
+  padding: 1px 1px;
+  text-transform: uppercase;
+  cursor: auto;
+  font-family: 'Lato';
   color: white;
 }
 
@@ -80,7 +89,7 @@ body.dashboard,
 body.admin-dashboard,
 body.animals-index, {
   padding-left: 80px;
-  padding-left: 80px;
+  padding-right: 80px;
   background-size: 100%;
 }
 
@@ -187,8 +196,7 @@ img.animal-cart {
 h1.header-white {
   color: #fff;
   text-transform: uppercase;
-  font-family: 'Taviraj';
-  font-style: italic;
+  font-family: 'Lato';
 }
 
 .animal-info {
@@ -210,7 +218,6 @@ h1.header-white {
 }
 
 .category-header {
-  padding-top: 60px;
   background-color: rgba(245, 245, 245, 0.6);
   margin: auto;
   max-width: 40%;
@@ -416,4 +423,9 @@ h5.bottom {
     margin-top: 60px;
     padding: 20px;
     text-align: center;
+}
+
+.padded {
+  color: #f1f1f1;
+  padding: 1px;
 }
