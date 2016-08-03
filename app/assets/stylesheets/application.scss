@@ -143,8 +143,8 @@ body.admin-animals {
 
 .admin-animal-list {
   background-color: rgba(245, 245, 245, 0.7);
-  margin: 40px;
-  max-width: 30%;
+  margin: 30px;
+  max-width: 25%;
   padding: 20px;
 }
 
@@ -161,6 +161,7 @@ body.secret-background {
 
 .shared-form {
   margin: left;
+  max-width: 100%;
 }
 
 table.form > tr > td {
