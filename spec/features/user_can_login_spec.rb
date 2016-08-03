@@ -84,4 +84,43 @@ RSpec.feature "UserCanLogin", type: :feature do
 
     expect(current_path).to eq(cart_path)
   end
+
+  scenario "they cannot login with invalid username" do
+    user = User.create(username: "someguy", password: "password")
+
+    visit root_path
+
+    click_on "Login"
+
+    expect(current_path).to eq(login_path)
+
+
+    fill_in "Username", with: "thisguy"
+    fill_in "Password", with: "password"
+
+    click_button "Login"
+
+    expect(current_path).to eq(login_path)
+    expect(page).to have_content("Invalid login")
+  end
+
+  scenario "they cannot login with invalid password" do
+    user = User.create(username: "someguy", password: "password")
+
+    visit root_path
+
+    click_on "Login"
+
+    expect(current_path).to eq(login_path)
+
+
+    fill_in "Username", with: "someguy"
+    fill_in "Password", with: "word"
+
+    click_button "Login"
+
+    expect(current_path).to eq(login_path)
+    expect(page).to have_content("Invalid login")
+  end
+
 end
