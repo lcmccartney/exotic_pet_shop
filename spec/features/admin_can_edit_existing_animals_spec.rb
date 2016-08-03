@@ -4,8 +4,13 @@ RSpec.feature "AdminCanEditExistingAnimals", type: :feature do
   scenario "they should be able to see updated animal" do
     user = User.create(role: 1, username: "admin", password: "password")
     big_cats = Category.create(name: "Big Cats")
-    reptiles = Category.create(name: "Reptiles")
-    animal = big_cats.animals.create(name: "Tiger", description: "Stalker in the night", price: 3500, image_path: "http://wildaid.org/sites/default/files/photos/iStock_000008484745Large%20%20tiger%20-%20bengal.jpg")
+    Category.create(name: "Reptiles")
+    animal = big_cats.animals.create(
+      name: "Tiger",
+      description: "Stalker in the night",
+      price: 3500,
+      image_path: "http://wildaid.org/sites/default/files/photos/iStock_000008484745Large%20%20tiger%20-%20bengal.jpg"
+      )
 
     visit login_path
 
