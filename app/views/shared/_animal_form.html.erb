@@ -1,0 +1,21 @@
+<%= form_for(@animal) do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+<br>
+  <%= f.label :description %>
+  <%= f.text_field :description %>
+<br>
+  <%= f.label :price %>
+  <%= f.text_field :price %>
+<br>
+  <%= f.label :image_path %>
+  <%= f.text_field :image_path %>
+<br>
+  <%= f.label :status %>
+  <%= f.select :status, options_for_select(@animal_statuses) %>
+<br>
+  <%= f.label :categories %>
+  <%= select_tag(:category_id, options_for_select(@categories)) %>
+<br>
+  <%= f.submit "Submit" %>
+<% end %>
