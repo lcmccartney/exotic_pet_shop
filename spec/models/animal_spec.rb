@@ -40,7 +40,7 @@ RSpec.describe Animal, type: :model do
 
   it "should not be able to create animals with duplicate names" do
     category = Category.create(name: "Big Cats")
-    animal_1 = category.animals.create(
+    category.animals.create(
       name: "Tiger",
       status: 0,
       description: "Stalker in the night",
@@ -50,7 +50,7 @@ RSpec.describe Animal, type: :model do
 
     expect(Animal.all.count).to eq(1)
 
-    animal_2 = category.animals.create(
+    category.animals.create(
       name: "Tiger",
       status: 0,
       description: "Stalker in the night",
