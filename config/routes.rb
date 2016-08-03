@@ -27,8 +27,13 @@ Rails.application.routes.draw do
     resources :animals, only: [:index, :edit]
     resources :users, only: [:edit]
   end
-    get '/dashboard', to: 'users#show'
 
+  get '/dashboard', to: 'users#show'
+
+    %w( 404 422 500 503 ).each do |code|
+        get code, :to => "errors#show", :code => code
+      end
   #keep this at the bottom - error message @category
   get "/:category_slug", to: 'categories#show'
+
 end
