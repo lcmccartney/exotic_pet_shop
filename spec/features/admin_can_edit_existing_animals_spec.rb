@@ -34,7 +34,7 @@ RSpec.feature "AdminCanEditExistingAnimals", type: :feature do
     click_button "Submit"
 
     expect(current_path).to eq(admin_animals_path)
-    expect(page).to have_content("Successfully updated!")
+    expect(page).to have_content("Successfully updated #{Animal.first.name}!")
 
     visit '/reptiles'
     expect(page).to have_content("Lion")
