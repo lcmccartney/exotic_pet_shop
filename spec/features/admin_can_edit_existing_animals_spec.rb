@@ -10,7 +10,7 @@ RSpec.feature "AdminCanEditExistingAnimals", type: :feature do
       description: "Stalker in the night",
       price: 3500,
       image_path: "http://wildaid.org/sites/default/files/photos/iStock_000008484745Large%20%20tiger%20-%20bengal.jpg"
-      )
+    )
 
     visit login_path
 
