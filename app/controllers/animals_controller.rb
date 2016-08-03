@@ -12,6 +12,7 @@ class AnimalsController < ApplicationController
   def new
     @animal = Animal.new
     @categories = Category.all_names
+    @animal_statuses = Animal.statuses.keys
   end
 
   def create
@@ -30,6 +31,7 @@ class AnimalsController < ApplicationController
   def update
     animal = Animal.find(params[:id])
     if animal.update(animal_params)
+      animal.update_attributes(category_id: params[:category_id])
       flash[:success] = "Successfully updated!"
       redirect_to admin_animals_path
     else

@@ -1,28 +1,10 @@
 <body class="create-animal">
   <div class="text-center">
-  <h1 class="header-white">Create an Animal</h1>
-</div>
+    <h1 class="header-white">Create an Animal</h1>
+  </div>
   <br>
   <div class ="well new-form">
     <table class="form">
-      <%= form_for(@animal) do |f| %>
-      <%= f.label :name %>
-      <%= f.text_field :name %>
-      <br>
-      <%= f.label :description %>
-      <%= f.text_field :description %>
-      <br>
-      <%= f.label :price %>
-      <%= f.text_field :price %>
-      <br>
-      <%= f.label :image_path %>
-      <%= f.text_field :image_path %>
-      <br>
-       <%= f.label :categories %>
-       <%#= f.select :category_id, options_for_select(Category.all.pluck(:id)) %>
-       <%= select_tag(:category_id, options_for_select(@categories)) %>
-       <br>
-       <%= f.submit "Create" %>
-       <% end %>
-  </div>
-</body>
+      <%= render partial: 'shared/animal_form' %>
+    </div>
+  </body>
