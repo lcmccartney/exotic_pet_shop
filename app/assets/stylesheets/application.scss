@@ -78,7 +78,7 @@ body.signup,
 body.create-animal,
 body.dashboard,
 body.admin-dashboard,
-body.animals-index {
+body.animals-index, {
   padding-left: 80px;
   padding-left: 80px;
   background-size: 100%;
@@ -101,11 +101,11 @@ body.animals-index {
 }
 
 .animal {
-  background: url("http://project4gallery.com/wp-content/uploads/2016/03/landscape_amazing_nature_quality_lake_background_picture-84.jpg") no-repeat center center fixed;
+  background: url("https://wallpapers.pub/web/wallpapers/valley-wallpaper/1920x1080.jpg") no-repeat center center fixed;
 }
 
 .animal-show {
-  background: url("http://smsranjish.com/wp-content/uploads/2015/08/Jungle-River-HD-Wallpapers.jpg") no-repeat center center fixed;
+  background: url("https://wallpapers.pub/web/wallpapers/jungle-river/1920x1080.jpg") no-repeat center center fixed;
 }
 
 .order-index {
@@ -137,6 +137,17 @@ body.admin-dashboard {
   background: url("https://wallpapers.pub/web/wallpapers/humpback-whale-tail/1920x1080.jpg") no-repeat center center fixed;
 }
 
+body.admin-animals {
+  background: url("https://wallpapers.pub/web/wallpapers/jaguar-in-mountains/1920x1080.jpg");
+}
+
+.admin-animal-list {
+  background-color: rgba(245, 245, 245, 0.7);
+  margin: 30px;
+  max-width: 25%;
+  padding: 20px;
+}
+
 body.secret-background {
   background: url("http://static.vecteezy.com/system/resources/previews/000/094/491/original/polygonal-texture-background-vector.jpg") no-repeat center center fixed;
 }
@@ -146,6 +157,11 @@ body.secret-background {
   margin: left;
   max-width: 30%;
   padding: 20px 20px 20px 20px;
+}
+
+.shared-form {
+  margin: left;
+  max-width: 100%;
 }
 
 table.form > tr > td {
@@ -179,6 +195,8 @@ h1.header-white {
   background-color: rgba(245, 245, 245, 0.7);
   margin: auto;
   max-width: 40%;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, .75);
+  text-transform: uppercase;
 }
 
 .animal-name {
