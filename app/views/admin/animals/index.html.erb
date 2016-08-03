@@ -1,6 +1,12 @@
-<h1>Admin's Animals</h1>
+<body class="admin-animals">
+<div class="well admin-animal-list">
+
+<h1>Edit Animals</h1>
 <% @animals.each do |animal|%>
-&nbsp&nbsp<%= animal.name %>
-<%= link_to "Edit", edit_admin_animal_path(animal)  %>
+<h4>
+&nbsp&nbsp<%= link_to animal.name, edit_admin_animal_path(animal)  %>
 <br>
+</h4>
 <% end %>
+</div>
+</body>
