@@ -5,5 +5,7 @@ class Admin::AnimalsController < Admin::BaseController
 
   def edit
     @animal = Animal.find(params[:id])
+    @categories = Category.all_names
+    @animal_statuses = Animal.statuses.keys
   end
 end
