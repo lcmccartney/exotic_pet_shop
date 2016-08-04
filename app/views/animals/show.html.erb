@@ -2,19 +2,20 @@
   <div class="text-center">
     <br><br>
     <div class="well animal-info">
-    <h3><%= @animal.name %></h3>
-    <br>
-    <img src="<%= @animal.image_path %>", class="animal-show">
-    <br><br>
-    <%= @animal.description %>
-    <br><br>
-    <strong>Price: <%= number_to_currency(@animal.price) %></strong>
-    <br>
-    <% if @animal.extinct? %>
-    <h3>This Animal is Extinct</h3>
-    <% else %>
-    <%= button_to "Add to Cart", cart_animals_path(id: @animal.id), class: "btn btn-success" %>
-    <% end %>
+      <h3><%= @animal.name %></h3>
+      <br>
+      <img src="<%= @animal.image_path %>", class="animal-show">
+      <br><br>
+      <%= @animal.description %>
+      <br><br>
+      <strong>Price: <%= number_to_currency(@animal.price) %></strong>
+      <br>
+      <% if @animal.extinct? %>
+      <h3>This Animal is Extinct</h3>
+      <% else %>
+      <%= button_to "Add to Cart", cart_animals_path(id: @animal.id), class: "btn btn-success" %>
+      <% end %>
+    </div>
   </div>
   <br>
 </body>

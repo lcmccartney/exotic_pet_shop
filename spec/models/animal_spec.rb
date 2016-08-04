@@ -24,6 +24,7 @@ RSpec.describe Animal, type: :model do
     )
 
     extinct_animal = animal_1.extinct?
+    
     expect(extinct_animal).to eq(true)
 
     animal_2 = category.animals.create(
@@ -35,6 +36,7 @@ RSpec.describe Animal, type: :model do
     )
 
     active_animal = animal_2.extinct?
+
     expect(active_animal).to eq(false)
   end
 

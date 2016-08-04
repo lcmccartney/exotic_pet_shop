@@ -1,5 +1,4 @@
 class OrdersController < ApplicationController
-
   def index
     if current_user
       @orders = current_user.orders
@@ -20,8 +19,8 @@ class OrdersController < ApplicationController
 
   def create
     order = Order.create(
-      user_id: current_user.id,
-      total_price: @cart.total_price
+    user_id: current_user.id,
+    total_price: @cart.total_price
     )
     create_order(order)
     @cart.contents.clear

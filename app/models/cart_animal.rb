@@ -1,5 +1,4 @@
 class CartAnimal < SimpleDelegator
-
   attr_reader :animal, :quantity
 
   def initialize(id, quantity)

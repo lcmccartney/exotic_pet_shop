@@ -1,11 +1,11 @@
 <body class="admin-animals">
   <h1 class="header-white text-center">Edit Animal</h1>
-<div class="well admin-animal-list">
-<% @animals.each do |animal|%>
-<h4>
-&nbsp&nbsp<%= link_to animal.name, edit_admin_animal_path(animal)  %>
-<br>
-</h4>
-<% end %>
-</div>
+  <div class="well admin-animal-list">
+    <% @animals.each do |animal|%>
+    <h4>
+       <%= link_to animal.name, edit_admin_animal_path(animal)  %>
+      <br>
+    </h4>
+    <% end %>
+  </div>
 </body>
