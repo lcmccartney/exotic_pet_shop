@@ -29,9 +29,7 @@ RSpec.feature "UserCanAddAnimalToCarts", type: :feature do
           image_path: "http://wildaid.org/sites/default/files/photos/iStock_000008484745Large%20%20tiger%20-%20bengal.jpg")
 
     visit animal_path(animal)
-
     click_on "Add to Cart"
-
     click_on "View Cart"
 
     expect(current_path).to eq(cart_path)
@@ -39,6 +37,5 @@ RSpec.feature "UserCanAddAnimalToCarts", type: :feature do
     expect(page).to have_content("Stalker in the night")
     expect(page).to have_content('3,500')
     expect(page).to have_xpath("//img[@src='http://wildaid.org/sites/default/files/photos/iStock_000008484745Large%20%20tiger%20-%20bengal.jpg']")
-
   end
 end

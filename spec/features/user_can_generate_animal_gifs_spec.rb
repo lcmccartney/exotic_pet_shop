@@ -8,6 +8,7 @@ RSpec.feature "UserCanGenerateAnimalGifs", type: :feature do
     expect(page).to have_content("Generate Animal!")
 
     click_on("Generate Animal!")
+    
     expect(page).to have_css("img")
     expect(current_path).to eq(secret_path)
   end

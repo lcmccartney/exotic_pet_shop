@@ -3,15 +3,13 @@ require 'rails_helper'
 RSpec.feature "UserCanLogin", type: :feature do
   scenario "they visit login page, create an account, and see dashboard" do
     visit root_path
-
     click_on "Login"
+
     expect(current_path).to eq(login_path)
 
     click_on "Create New Account"
-
     fill_in "Username", with: "someguy"
     fill_in "Password", with: "password"
-
     click_on "Create Account"
 
     expect(current_path).to eq(dashboard_path)
@@ -24,14 +22,12 @@ RSpec.feature "UserCanLogin", type: :feature do
     User.create(username: "someguy", password: "password")
 
     visit root_path
-
     click_on "Login"
 
     expect(current_path).to eq(login_path)
 
     fill_in "Username", with: "someguy"
     fill_in "Password", with: "password"
-
     click_button "Login"
 
     expect(current_path).to eq(dashboard_path)
@@ -42,16 +38,13 @@ RSpec.feature "UserCanLogin", type: :feature do
     User.create(username: "someguy", password: "password")
 
     visit root_path
-
     click_on "Login"
 
     expect(current_path).to eq(login_path)
 
     fill_in "Username", with: "someguy"
     fill_in "Password", with: "password"
-
     click_button "Login"
-
     click_on "Logout"
 
     expect(page).to have_no_content("Logged in as someguy")
@@ -65,16 +58,11 @@ RSpec.feature "UserCanLogin", type: :feature do
     tiger = category.animals.create(id: "1", name: "Tiger", description: "Stalker in the night", price: 3000, image_path: "http://wildaid.org/sites/default/files/photos/iStock_000008484745Large%20%20tiger%20-%20bengal.jpg")
 
     visit "/animals/#{tiger.id}"
-
     click_on "Add to Cart"
-
     visit cart_path
-
     click_on "Login or Create Account to Checkout"
-
     fill_in "Username", with: "someguy"
     fill_in "Password", with: "password"
-
     click_button "Login"
 
     expect(current_path).to eq(cart_path)
@@ -84,14 +72,12 @@ RSpec.feature "UserCanLogin", type: :feature do
     User.create(username: "someguy", password: "password")
 
     visit root_path
-
     click_on "Login"
 
     expect(current_path).to eq(login_path)
 
     fill_in "Username", with: "thisguy"
     fill_in "Password", with: "password"
-
     click_button "Login"
 
     expect(current_path).to eq(login_path)
@@ -102,14 +88,12 @@ RSpec.feature "UserCanLogin", type: :feature do
     User.create(username: "someguy", password: "password")
 
     visit root_path
-
     click_on "Login"
 
     expect(current_path).to eq(login_path)
 
     fill_in "Username", with: "someguy"
     fill_in "Password", with: "word"
-
     click_button "Login"
 
     expect(current_path).to eq(login_path)

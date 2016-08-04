@@ -6,9 +6,7 @@ RSpec.feature "GuestUserCanAddToCart", type: :feature do
     animal = category.animals.create(name: "Tiger", description: "Stalker in the night", price: 3500, image_path: "http://wildaid.org/sites/default/files/photos/iStock_000008484745Large%20%20tiger%20-%20bengal.jpg")
 
     visit "/animals/#{animal.id}"
-
     click_on "Add to Cart"
-
     visit cart_path
 
     expect(page).to have_content("Tiger")
@@ -19,12 +17,9 @@ RSpec.feature "GuestUserCanAddToCart", type: :feature do
     expect(current_path).to eq(login_path)
 
     click_on "Create New Account"
-
     fill_in "Username", with: "someguy"
     fill_in "Password", with: "password"
-
     click_on "Create Account"
-
     visit cart_path
 
     expect(page).to have_content("Tiger")

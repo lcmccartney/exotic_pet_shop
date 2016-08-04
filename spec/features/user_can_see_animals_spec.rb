@@ -17,7 +17,6 @@ RSpec.feature "UserCanSeeAnimals", type: :feature do
     animal = category.animals.create(name: "Tiger", description: "Stalker in the night", price: 3500, image_path: "http://wildaid.org/sites/default/files/photos/iStock_000008484745Large%20%20tiger%20-%20bengal.jpg")
 
     visit '/big-cats'
-
     click_on "Tiger"
 
     expect(current_path).to eq(animal_path(animal))
@@ -30,7 +29,6 @@ RSpec.feature "UserCanSeeAnimals", type: :feature do
     animal = category.animals.create(name: "Tiger", description: "Stalker in the night", price: 3500, image_path: "http://wildaid.org/sites/default/files/photos/iStock_000008484745Large%20%20tiger%20-%20bengal.jpg")
 
     visit categories_path
-
     click_on "All Animals"
 
     expect(current_path).to eq(animals_path)
