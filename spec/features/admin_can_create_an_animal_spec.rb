@@ -7,16 +7,16 @@ RSpec.feature "AdminCanCreateAnAnimal", type: :feature do
     Category.create(name: "Reptiles")
 
     visit login_path
-
     fill_in "Username", with: "admin"
     fill_in "Password", with: "password"
-
     click_button("Login")
 
     expect(current_path).to eq(admin_dashboard_path)
+
     click_on("Create an Animal")
 
     expect(current_path).to eq(new_animal_path)
+
     fill_in "Name", with: "Cougar"
     fill_in "Description", with: "Active in the day"
     fill_in "Price", with: 9000
@@ -24,7 +24,9 @@ RSpec.feature "AdminCanCreateAnAnimal", type: :feature do
     select "extinct"
     select "Big Cats"
     click_on "Submit"
+
     animal = Animal.last
+
     expect(current_path).to eq(new_animal_path)
     expect(page).to have_content("Successfully created #{animal.name}")
 
@@ -44,22 +46,24 @@ RSpec.feature "AdminCanCreateAnAnimal", type: :feature do
     Category.create(name: "Reptiles")
 
     visit login_path
-
     fill_in "Username", with: "admin"
     fill_in "Password", with: "password"
-
     click_button("Login")
 
     expect(current_path).to eq(admin_dashboard_path)
+
     click_on("Create an Animal")
 
     expect(current_path).to eq(new_animal_path)
+
     fill_in "Name", with: "Cougar"
     fill_in "Description", with: "Active in the day"
     fill_in "Price", with: 9000
     select "Big Cats"
     click_on "Submit"
+
     animal = Animal.last
+
     expect(current_path).to eq(new_animal_path)
     expect(page).to have_content("Successfully created #{animal.name}")
 

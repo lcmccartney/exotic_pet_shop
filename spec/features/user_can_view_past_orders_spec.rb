@@ -4,11 +4,10 @@ RSpec.feature "UserCanViewPastOrders", type: :feature do
   scenario "they can see past orders as a logged in user" do
     user = User.create(username: "someguy", password: "password")
     order = user.orders.create(status: "ordered")
-    visit login_path
 
+    visit login_path
     fill_in "Username", with: "someguy"
     fill_in "Password", with: "password"
-
     click_button "Login"
 
     expect(page).to have_content("Welcome, someguy")
@@ -20,7 +19,6 @@ RSpec.feature "UserCanViewPastOrders", type: :feature do
   end
 
   scenario "they are redirected to login page if they are not logged in" do
-
     visit orders_path
 
     expect(page).to have_no_content("Past Orders")
@@ -34,31 +32,23 @@ RSpec.feature "UserCanViewPastOrders", type: :feature do
     user = User.create(username: "someguy", password: "password")
 
     visit "/animals/#{tiger.id}"
-
     click_on "Add to Cart"
-
     visit cart_path
-
     click_on "+"
 
     expect(page).to have_content('6,000')
 
     visit "/animals/#{lion.id}"
-
     click_on "Add to Cart"
-
     visit cart_path
 
     expect(page).to have_content('7,000')
     expect(page).to have_content('13,000')
 
     click_on "Login or Create Account to Checkout"
-
     fill_in "Username", with: "someguy"
     fill_in "Password", with: "password"
-
     click_button "Login"
-
     click_on "Checkout"
 
     order = Order.last

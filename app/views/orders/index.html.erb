@@ -1,7 +1,7 @@
 <body class="order-index">
   <div class="container">
     <h1 class="text-center well order-index-table">Past Orders</h1>
-     <br>
+    <br>
     <div class="well text-center order-index-table">
       <table class="table table-bordered">
         <thead>
@@ -10,19 +10,19 @@
           <td class="lead">Details</td>
         </thead>
         <% @orders.each do |order| %>
-          <tbody>
-           <td>
-             <%= order.id %>
-           </td>
-           <td>
-             <%= order.created_at %>
-           </td>
-           <td>
-             <%= link_to "View Order Details", order_path(order), class: "btn btn-info" %>
-           </td>
-         </tbody>
-      <% end %>
-    </table>
+        <tbody>
+          <td>
+            <%= order.id %>
+          </td>
+          <td>
+            <%= order.created_at %>
+          </td>
+          <td>
+            <%= link_to "View Order Details", order_path(order), class: "btn btn-info" %>
+          </td>
+        </tbody>
+        <% end %>
+      </table>
     </div>
   </div>
 </body>

@@ -32,5 +32,4 @@ class CartAnimalsController < ApplicationController
   def set_animal
     @animal = Animal.find(params[:id])
   end
-
 end

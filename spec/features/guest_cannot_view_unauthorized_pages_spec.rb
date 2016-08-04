@@ -1,12 +1,10 @@
 require 'rails_helper'
 
 RSpec.feature "GuestCannotViewUnauthorizedPages", type: :feature do
-
     scenario "they cannot view another user's private data" do
       visit admin_dashboard_path
 
       expect(page).to have_content("404")
-
     end
 
     scenario "they cannot view any admin capablities" do
@@ -29,5 +27,4 @@ RSpec.feature "GuestCannotViewUnauthorizedPages", type: :feature do
 
       expect(page).to have_content("Please log in or create an account.")
     end
-
   end
