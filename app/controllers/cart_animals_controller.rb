@@ -15,7 +15,7 @@ class CartAnimalsController < ApplicationController
   def increment
     if params[:increment] == "decrease"
       @cart.decrease_animal(@animal.id) if params[:increment] == "decrease"
-      flash[:success] = "Successfully removed #{animal_link} from your cart."
+      flash[:success] = "Successfully removed #{animal_link(@animal)} from your cart."
     elsif params[:increment] == "increase"
       @cart.increase_animal(@animal.id)
       flash[:success] = "Successfully added #{@animal.name}!"
@@ -25,7 +25,7 @@ class CartAnimalsController < ApplicationController
 
   def destroy
     @cart.remove_animal(@animal.id)
-    flash[:success] = "Successfully removed #{animal_link} from your cart."
+    flash[:success] = "Successfully removed #{animal_link(@animal)} from your cart."
     redirect_to cart_path
   end
 
@@ -33,7 +33,4 @@ class CartAnimalsController < ApplicationController
     @animal = Animal.find(params[:id])
   end
 
-  def animal_link
-    %Q(<a href="/animals/#{@animal.id}">#{@animal.name}</a>)
-  end
 end

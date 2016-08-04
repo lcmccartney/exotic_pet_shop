@@ -14,4 +14,8 @@ class ApplicationController < ActionController::Base
   def current_admin?
     current_user && current_user.admin?
   end
+
+  def animal_link(animal)
+    %Q(<a href="/animals/#{animal.id}">#{animal.name}</a>)
+  end
 end
