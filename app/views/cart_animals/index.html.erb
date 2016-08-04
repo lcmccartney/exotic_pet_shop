@@ -44,7 +44,7 @@
                             </td>
 
                             <td class="col-sm-1 col-md-1 text-center"><strong><%= number_to_currency(animal.price) %></strong></td>
-                            <td class="col-sm-1 col-md-1 text-center"><strong><%= number_to_currency(animal.price * @cart.count_of(animal.id)) %></strong></td>
+                            <td class="col-sm-1 col-md-1 text-center"><strong><%= number_to_currency(animal.subtotal) %></strong></td>
 
                         </tr>
                         <% end %>
