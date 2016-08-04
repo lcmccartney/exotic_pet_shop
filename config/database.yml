@@ -81,5 +81,5 @@ test:
 production:
   <<: *default
   database: exotic_pet_shop_production
-  username: exotic_pet_shop
+  username: lmac
   password: <%= ENV['EXOTIC_PET_SHOP_DATABASE_PASSWORD'] %>
