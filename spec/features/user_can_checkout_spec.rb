@@ -37,7 +37,7 @@ RSpec.feature "UserCanCheckout", type: :feature do
 
     visit orders_path
 
-    expect(page).to have_content("You have no orders")
+    expect(page).to have_no_content("View Order Details")
 
     visit cart_path
 

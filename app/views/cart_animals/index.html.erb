@@ -20,7 +20,6 @@
                             <th>Animal</th>
                             <th>Quantity</th>
                             <th class="text-center">Unit Price</th>
-                            <!-- <th class="text-center">Unit Price</th> -->
                             <th class="text-center">Total</th>
                         </tr>
                     </thead>
@@ -45,7 +44,7 @@
                             </td>
 
                             <td class="col-sm-1 col-md-1 text-center"><strong><%= number_to_currency(animal.price) %></strong></td>
-                            <td class="col-sm-1 col-md-1 text-center"><strong><%= number_to_currency(animal.price * @cart.count_of(animal.id)) %></strong></td>
+                            <td class="col-sm-1 col-md-1 text-center"><strong><%= number_to_currency(animal.subtotal) %></strong></td>
 
                         </tr>
                         <% end %>
@@ -69,7 +68,7 @@
                               <%= link_to "Continue Shopping", animals_path, class: "btn btn-info" %>
                             </td>
                             <td>
-                              <%= button_to "Checkout", orders_path,  class: "btn btn-success" if !@cart.contents.empty? && current_user%>
+                              <%= button_to "Checkout", orders_path,  class: "btn btn-success" if @cart.contents.any? && current_user%>
 
                               <%= link_to "Login or Create Account to Checkout", login_path, class: "btn btn-success" if current_user.nil? %>
                             </td>
